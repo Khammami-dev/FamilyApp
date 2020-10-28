@@ -1,0 +1,84 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #8492a6;
+}
+h1,h4,h5,h6{
+    color: #161c2d;
+    font-weight:500;
+}
+h2{
+    color: #231e71;
+}
+h3{
+    color: #5eb5e0;
+}
+.nav-top-position{
+    z-index:3;
+    position:relative;
+}
+.hero-banner {
+    height: 600px;
+    overflow: hidden;
+    position:relative;
+    top:-60px;
+    background-size: 100%;
+    width: 100%;
+
+
+
+
+}
+.btn-lg{
+    font-size:15px;
+}
+.circle-small img {
+    width: 60px;
+    height: 60px;
+}
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+.dd{
+    width:90px;
+    height:90px;
+    border-radius:90px;
+    margin:0 auto;
+}
+.pp img{
+    width:200px;
+    height:auto;
+}
+.dd i{
+    font-size:20px;
+}
+.rr{
+    width:100%;
+}
+.rr img{
+    width:150px;
+    height:auto;
+    filter: grayscale(100%);
+}
+.tt{
+    width:50px;
+    height:auto;
+    margin-right:20px;
+    margin-left:60px;
+}
+.btn{
+    font-weight:500;
+}
+::placeholder{
+    font-size:14px;
+    font-weight:500;
+}
+.footer-logo img{
+    width:150px;
+    height:auto;
+
+}
+footer {
+    background-color: #231e71;
+}
