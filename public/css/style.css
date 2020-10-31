@@ -3,7 +3,7 @@ body{
     font-family: 'Poppins', sans-serif;
     color: #8492a6;
 }
-h1,h4,h5,h6{
+h1,h4,h6{
     color: #161c2d;
     font-weight:500;
 }
@@ -12,6 +12,9 @@ h2{
 }
 h3{
     color: #5eb5e0;
+}
+h5{
+    color: #FFFFFF;
 }
 .nav-top-position{
     z-index:3;
@@ -24,6 +27,7 @@ h3{
     top:-60px;
     background-size: 100%;
     width: 100%;
+    margin-bottom: -7%;
 
 
 
@@ -79,6 +83,21 @@ h3{
     height:auto;
 
 }
-footer {
-    background-color: #231e71;
+
+#foot-top{
+    background-color: #102f50;
+}
+.footer-items{
+    text-align: center;
+    margin-left: 35%;
+
+}
+.footer-items li {
+    color:white;
+}
+#Footer-copyright{
+ margin-left: 35%;
+}
+.nav-link{
+    color: #FFFFFF !important;
 }
