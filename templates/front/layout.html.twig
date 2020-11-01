@@ -8,9 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link href="http://open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
-    <link href="{{ asset }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('select2-4.0.10/dist/css/select2.min.css') }}" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b31e06099e.js" crossorigin="anonymous"></script>
-    <title>Free bootstrap landing page for your company</title>
+    <title>
+        {% block title %}
+            Help.tn
+        {% endblock %}
+    </title>
 
 </head>
 <body>
@@ -20,409 +25,118 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mr-3">
-                <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">About Us</a> </li>
-                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a> </div>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="#">
+                        Acceuil
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
-                <li class="nav-item"> <a class="nav-link" href="#">Contact Us</a> </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Réclamation
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Réclamation des pertes</a>
+                        <a class="dropdown-item" href="#">Réclamation d'attaque à main harmée</a>
+                        <a class="dropdown-item" href="#">Réclamation d'harcélement sexuel</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Envoyer une Alerte d'urgence</a>
+                </li>
             </ul>
-            <div> <a class="btn btn-outline-light" href="#"><i class="fas fa-phone-square-alt"></i> 898-524-2564</a> <a class="btn btn-outline-light" href="#"><i class="fas fa-envelope-square"></i> info@yourcompany.com</a> </div>
+            <div>
+                <a class="btn btn-primary btn-lg" href="#">
+                    Inscription
+                </a>
+            </div>
         </div>
     </nav>
 </div>
 <!-------------Navbar ends here------------------->
-
-<div class="hero-banner d-flex align-items-center">
+<div class="hero-banner d-flex align-items-center" style="background-image: url('{{ asset("img/Police-Tunisie.jpg") }}')">
     <div class="container py-5">
         <div class="row py-5">
             <div class="col-md-8 mx-auto text-center text-white">
-                <h1 class="mb-4 text-white font-weight-bold">Build a landing page for your business or project and generate more leads!</h1>
-                <p class="font-weight-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula molestie orci, in laoreet turpis. In feugiat sem consectetur, sollicitudin velit in, ultricies massa.  </p>
+                <h1 class="mb-4 text-white font-weight-bold">Envoyez nous une alerte en cas d'urgence !</h1>
                 <div class="pt-4">
-                    <a href="#" class="btn btn-outline-light btn-lg">View More</a>
-                    <a href="#" class="btn btn-primary btn-lg">Contact Us</a>
+                    <a href="#" class="btn btn-danger btn-lg">Envoyer une alerte d'urgence</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-------------Hero banner ends here------------------->
-<div class="container py-5">
-    <div class="row py-5">
-        <div class="col-md-6">
-            <img src="img/image-two.jpg" class="img-fluid pr-4"> </div>
-        <div class="col-md-6">
-            <p class="small font-weight-bold">KNOWLEDGE OF THE MARKET</p>
-            <h3 class="mb-3">We're providing the best SEO services for your website</h3>
-            <p class="mb-4">An enim nullam tempor sapien gravida donec pretium ipsum porta justo integer at odio velna vitae auctor integera congue magna at purus pretium ligula rutrum luctus ultrice a gravida lectus suscipit gestas magna suscipit luctus undo</p>
-            <blockquote class="blockquote lead">
-                "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean magna ligula eget dolor suscipit egestas at viverra dolor iaculis luctus magna suscipit egestas "
-            </blockquote>
-            <div class="d-flex align-items-center mt-4">
-                <div class="circle-small mr-3">
-                    <img class="rounded-circle" src="img/3.jpg">
-                </div>
-                <div>
-                    <h6 class="font-weight-bold mb-0">Micheal Smith</h6>
-                    <span class="small text-black-50">- Web Developer</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-------------About info section ends here------------------->
-
-<div class="bg-light">
-    <div class="container py-5">
-        <div class="row pt-2 pb-4">
-            <div class="col-8 mx-auto text-center">
-                <h2 class="pb-3">Custom SEO Services – Our Specialty</h2>
-                <p class="">Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, blandit posuere and ligula varius magna a porta elementum massa risus</p>
-            </div>
-        </div>
-        <div  class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3 feature-icon text-center">
-                <div class="dd d-flex bg-white justify-content-center align-items-center shadow-sm mb-4">
-                    <div><i class="fas fa-search-location"></i></div>
-                </div>
-                <h5 class="mb-3">Local SEO</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 feature-icon text-center">
-                <div class="dd d-flex bg-white justify-content-center align-items-center shadow-sm mb-4">
-                    <div><i class="fas fa-dumpster-fire"></i></div>
-                </div>
-
-                <h5 class="mb-3">E-commerce SEO</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 feature-icon text-center">
-                <div class="dd d-flex bg-white justify-content-center align-items-center shadow-sm mb-4">
-                    <div><i class="fas fa-chart-bar"></i></div>
-                </div>
-                <h5 class="mb-3">Advanced Analytics</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 feature-icon text-center">
-                <div class="dd d-flex bg-white justify-content-center align-items-center shadow-sm mb-4">
-                    <div><i class="fas fa-tasks"></i></div>
-                </div>
-                <h5 class="mb-3">PPC Management</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="pt-4">
-                    <a href="#" class="btn btn-outline-secondary btn-lg mr-2">View More</a>
-                    <a href="#" class="btn btn-primary btn-lg ml-2">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-------------Service section ends here------------------->
-
-<div class="container pt-5">
-    <div class="row py-3">
-        <div class="col-8 mx-auto text-center">
-            <h2 class="pb-3">Clients that love us</h2>
-            <p class="">Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, blandit posuere and ligula varius magna a porta elementum massa risus</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-4 mb-2">
-            <div class="bg-light py-3 text-center px-2 rr"><img src="img/aven.png" class="img-fluid"></div>
-        </div>
-        <div class="col-md-3 col-sm-4 mb-2">
-            <div class="bg-light py-3 text-center px-2 rr"><img src="img/circle.png" class="img-fluid"></div>
-        </div>
-        <div class="col-md-3 col-sm-4 mb-2">
-            <div class="bg-light py-3 text-center px-2 rr"><img src="img/hexa.png" class="img-fluid"></div>
-        </div>
-        <div class="col-md-3 col-sm-4 mb-2">
-            <div class="bg-light py-3 text-center px-2 rr"><img src="img/treva.png" class="img-fluid"></div>
-        </div>
-
-    </div>
-</div>
-
-<!-- ***** Team Area Start ***** -->
-<section class="sectionpt pt-5 pb-5">
+<!-- ***** Section personnes perdues ***** -->
+<section class="sectionpt pt-5 pb-5" >
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-6">
                 <!-- Section Heading -->
                 <div class="text-center">
-                    <h2 class="text-capitalize pb-3">Our Team Experts</h2>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                    <h2 class="text-capitalize pb-3">
+                        {% block grandtitre %}
+
+                        {% endblock %}
+                    </h2>
+                    <h3 class="text-capitalize pb-3">
+                        {% block petittitre %}
+
+                        {% endblock %}
+                    </h3>
 
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/1.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Founder &amp; CEO</h6>
-                            <!-- Team Icons -->
-                            <div class="team-icons pt-2">
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-google-plus-g"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/2.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Founder &amp; CEO</h6>
-                            <!-- Team Icons -->
-                            <div class="team-icons pt-2">
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-google-plus-g"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/3.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Founder &amp; CEO</h6>
-                            <!-- Team Icons -->
-                            <div class="team-icons pt-2">
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-google-plus-g"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/4.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Founder &amp; CEO</h6>
-                            <!-- Team Icons -->
-                            <div class="team-icons pt-2">
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-google-plus-g"></i></a>
-                                <a class="p-2 text-black-50" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
 </section>
-<!-- ***** Team Area End ***** -->
+<!-- ***** End section personnes perdues ***** -->
 
 
-<!-- ***** Subscribe Area Start ***** -->
-<section class="section pt-3 pb-4 bg-light">
-    <div class="container py-5">
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-6 text-center">
-                <h3 class="pb-2">Interested In Our Services?</h3>
-                <p class="small pb-4">Use the form headline and this subheader to describe the purpose of your form.</p>
-                <form id="contact-form" method="" action="">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-lg" name="name" placeholder="Name" required="">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control form-control-lg" name="email" placeholder="Email" required="">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-lg" name="subject" placeholder="Subject" required="">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-group">
-                                <textarea class="form-control form-control-lg" name="message" placeholder="Message" required=""></textarea>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-lg w-100 btn-primary shadow-sm"><span class="text-dark pr-3"><i class="fas fa-paper-plane text-white" aria-hidden="true"></i></span>Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <div class="d-flex mb-4 mt-5">
-                    <div class="tt"><img src="img/c708a44e-o-consultancy-icon-ecommerce.svg"></div>
-                    <div>
-                        <h6>E-COMMERCE</h6>
-                        <p>Maecenas varius nunc a odio ultrices, non consectetur nunc scelerisque.</p>
-                    </div>
-                </div>
-                <div class="d-flex mb-4">
-                    <div class="tt"><img src="img/5bb4fb0d-o-consultancy-icon-email.svg"></div>
-                    <div>
-                        <h6>EMAIL SYSTEMS</h6>
-                        <p>Maecenas varius nunc a odio ultrices, non consectetur nunc scelerisque.</p>
-                    </div>
-                </div>
-                <div class="d-flex mb-4">
-                    <div class="tt"><img src="img/9f457518-o-consultancy-icon-video.svg"></div>
-                    <div>
-                        <h6>VIDEO PRODUCTION</h6>
-                        <p>Maecenas varius nunc a odio ultrices, non consectetur nunc scelerisque.</p>
-                    </div>
-                </div>
-                <div class="d-flex mb-4">
-                    <div class="tt"><img src="img/4e5bc5d1-o-consultancy-icon-photography.svg"></div>
-                    <div>
-                        <h6>PHOTOGRAPHY</h6>
-                        <p>Maecenas varius nunc a odio ultrices, non consectetur nunc scelerisque.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="pt-4">
-                    <a href="#" class="btn btn-outline-secondary btn-lg mr-2">View More</a>
-                    <a href="#" class="btn btn-primary btn-lg ml-2">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** Subscribe Area End ***** -->
+
+
+
+{% block body %}
+{% endblock %}
+
+
+
+
 
 
 <!--====== Footer Area Start ======-->
 <footer class="pt-5">
     <!-- Footer Top -->
-    <div class="py-3">
+    <div class="py-3" id="foot-top">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <!-- Footer Items -->
-                    <div class="footer-items">
-                        <!-- Logo -->
-                        <a class="footer-logo" href="#">
-                            <img class="logo mb-3" src="img/logo-grey.png" alt="">
-                        </a>
-                        <p class="mt-2 mb-3 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</p>
-                        <!-- Social Icons -->
-                        <div class="social-icons d-flex">
-                            <a class="p-2" href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="p-2"  href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="p-2"  href="#">
-                                <i class="fab fa-google-plus-g"></i>
-                            </a>
-                            <a class="p-2"  href="#">
-                                <i class="fab fa-vine"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <!-- Footer Items -->
-                    <div class="footer-items">
-                        <!-- Footer Title -->
-                        <h5 class="mb-3">Useful Links</h5>
-                        <ul class="list-unstyled small">
-                            <li class="pt-2"><a href="#">Home</a></li>
-                            <li class="pt-2"><a href="#">About Us</a></li>
-                            <li class="pt-2"><a href="#">Services</a></li>
-                            <li class="pt-2"><a href="#">Blog</a></li>
-                            <li class="pt-2"><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <!-- Footer Items -->
-                    <div class="footer-items">
-                        <!-- Footer Title -->
-                        <h5 class="mb-3">Product Help</h5>
-                        <ul class="list-unstyled small">
-                            <li class="pt-2"><a href="#">FAQ</a></li>
-                            <li class="pt-2"><a href="#">Privacy Policy</a></li>
-                            <li class="pt-2"><a href="#">Support</a></li>
-                            <li class="pt-2"><a href="#">Terms &amp; Conditions</a></li>
-                            <li class="pt-2"><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <!-- Footer Items -->
-                    <div class="footer-items">
-                        <!-- Footer Title -->
-                        <h5 class="mb-3">Download</h5>
-                        <!-- Store Buttons -->
-                        <div class="d-flex flex-wrap pp">
-                            <a href="#">
-                                <img src="img/android_badge_web_generic_0.png" class="img-fluid" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="img/Apple_App_Store_Badge_US-UK_135x40_0.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
+                <!-- Footer Items -->
+                <div class="footer-items">
+                    <!-- Footer Title -->
+                    <h5 class="mb-3">Contactes des urgences</h5>
+                    <ul class="list-unstyled small">
+                        <li class="pt-2">Police secours : 197</li>
+                        <li class="pt-2">Ambulance médicalisées : 71 780 000 ou 71 781 000 </li>
+                        <li class="pt-2">SOS Ambulances : 71 725 555 ou 71 599 900</li>
+                        <li class="pt-2">Urgence le secour : 71 351 000 </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer Bottom -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <!-- Copyright Area -->
-                <div class="d-flex flex-wrap justify-content-center justify-content-sm-between text-center py-4">
-                    <!-- Copyright Left -->
-                    <div class="small font-weight-bold">&copy; Copyrights 2020 thisApp All rights reserved.</div>
-                    <!-- Copyright Right -->
-                    <div class="small font-weight-bold">Made with <i class="fas fa-heart"></i> By <a href="https://bootstraplily.com/">BootstrapLily</a></div>
-                </div>
+    <div class="container" id="Footer-Bottom">
+        <div class="row" id="Footer-copyright">
+            <!-- Copyright Area -->
+            <div class="d-flex flex-wrap justify-content-center justify-content-sm-between text-center py-4">
+                <!-- Copyright Left -->
+                <div class="small font-weight-bold">&copy; Copyrights 2020 thisApp All rights reserved.</div>
+
             </div>
         </div>
+
     </div>
 </footer>
 <!--====== Footer Area End ======-->
@@ -432,8 +146,10 @@
 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="{{ asset('select2-4.0.10/dist/js/select2.min.js') }}"></script>
+        <script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
+   </body>
 </html>

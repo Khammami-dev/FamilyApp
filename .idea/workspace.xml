@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/front/AjoutRecPerteObjet.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
@@ -160,7 +161,9 @@
       <workItem from="1603882799488" duration="14493000" />
       <workItem from="1604052955641" duration="1313000" />
       <workItem from="1604146703104" duration="89000" />
-      <workItem from="1604171748190" duration="7362000" />
+      <workItem from="1604171748190" duration="12233000" />
+      <workItem from="1604225214981" duration="245000" />
+      <workItem from="1604226320131" duration="10850000" />
     </task>
     <servers />
   </component>
@@ -168,10 +171,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603905386664">
+    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604180267497">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1603905386664" />
+    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1604180267497" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1603905945357">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
