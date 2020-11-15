@@ -16,7 +16,21 @@
             Help.tn
         {% endblock %}
     </title>
-
+    {% for message in app.session.flashBag.get('error') %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.session.flashBag.get('info') %}
+        <div class="alert alert-info">
+            {{ message }}
+        </div>
+    {% endfor %}
 </head>
 <body>
 <div class="bg-transparent nav-top-position">
@@ -26,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mr-3">
                 <li class="nav-item active ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ path('home') }}">
                         Acceuil
                         <span class="sr-only">(current)</span>
                     </a>
@@ -37,7 +51,8 @@
                         Réclamation
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Réclamation des pertes</a>
+                        <a class="dropdown-item" href="{{ path('add.objet_perdu') }}">Réclamation des objets perdus</a>
+                        <a class="dropdown-item" href="#">Réclamation des personnes perdus</a>
                         <a class="dropdown-item" href="#">Réclamation d'attaque à main harmée</a>
                         <a class="dropdown-item" href="#">Réclamation d'harcélement sexuel</a>
                         <div class="dropdown-divider"></div>

@@ -1,7 +1,7 @@
 
 {% extends 'front/layout.html.twig' %}
 {% block title %}Home{% endblock %}
-{% block grandtitre %} Les dérniére annonces {% endblock %}
+{% block grandtitre %} Les dérniéres annonces {% endblock %}
 {% block petittitre %} objet perdues {% endblock %}
 {% block body %}
 <!-- ***** Section personnes perdues ***** -->
@@ -111,116 +111,49 @@
 
 
 <!-- ***** Section objets perdues ***** -->
-<section class="sectionpt pt-5 pb-5" >
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-6">
-                <!-- Section Heading -->
-                <div class="text-center">
-                    <h3 class="text-capitalize pb-3">Des objets perdues</h3>
+    <section class="sectionpt pt-5 pb-5" >
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-6">
+                    <!-- Section Heading -->
+                    <div class="text-center">
+                        <h3 class="text-capitalize pb-3">Des objets perdus</h3>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/1.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
+            <div class="row">
+                {%  for objetperdu in objetsperdus  %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <!-- Single Team -->
+                    <div class="rounded text-center m-2 m-lg-0">
+                        <!-- Team Thumb -->
+                        <div>
+                            <img src="{{ objetperdu.image }}" class="img-fluid rounded" alt="">
+                            <!-- Team Overlay -->
+                            <div class="pt-3">
+                                <h5>Junaid Hasan</h5>
+                                <h6 class="small">{{ objetperdu.titre }}</h6>
+                                <p>{{ objetperdu.description }}</p>
+                                <div class="pt-2">
+                                    <div class=" pt-2">
+                                        <a  href="{{ path('details.objet_perdu', {'objetperdu': objetperdu.id}) }}">
+                                            Lire la suite
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/2.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class=" pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-8 mx-auto text-center" >
+                    <a class="btn btn-primary btn-lg " href="#">
+                        Voir plus
+                    </a>
                 </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/3.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/4.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="col-md-8 mx-auto text-center" >
-        <a class="btn btn-primary btn-lg " href="#">
-            Voir plus
-        </a>
-    </div>
-</section>
+    </section>
 <!-- ***** End section objets perdues ***** -->
 
 <section class="sectionpt pt-5 pb-5" >
@@ -326,6 +259,15 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
     <div class="col-md-8 mx-auto text-center" >
         <a class="btn btn-primary btn-lg " href="#">
             Voir plus
