@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\CommisseriatPolice;
+use App\Entity\Commisariat;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method CommisseriatPolice|null find($id, $lockMode = null, $lockVersion = null)
- * @method CommisseriatPolice|null findOneBy(array $criteria, array $orderBy = null)
- * @method CommisseriatPolice[]    findAll()
- * @method CommisseriatPolice[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Commisariat|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Commisariat|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Commisariat[]    findAll()
+ * @method Commisariat[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class CommisseriatPoliceRepository extends ServiceEntityRepository
+class CommisariatRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, CommisseriatPolice::class);
+        parent::__construct($registry, Commisariat::class);
     }
 
     // /**
-    //  * @return CommisseriatPolice[] Returns an array of CommisseriatPolice objects
+    //  * @return Commisariat[] Returns an array of Commisariat objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class CommisseriatPoliceRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?CommisseriatPolice
+    public function findOneBySomeField($value): ?Commisariat
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.exampleField = :val')

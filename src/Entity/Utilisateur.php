@@ -22,15 +22,15 @@ class Utilisateur
     /**
      * @ORM\Column(type="integer")
      */
-    private $NumCin;
+    private $num_cin;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=255)
      */
     private $nom;
 
     /**
-     * @ORM\Column(type="string", length=80)
+     * @ORM\Column(type="string", length=255)
      */
     private $prenom;
 
@@ -45,13 +45,13 @@ class Utilisateur
     private $telephone;
 
     /**
-     * @ORM\OneToMany(targetEntity=RecObjetPerdu::class, mappedBy="id_utilisateur")
+     * @ORM\OneToMany(targetEntity=Reclamation::class, mappedBy="id_utilisateur", orphanRemoval=true)
      */
-    private $recObjetPerdus;
+    private $reclamations;
 
     public function __construct()
     {
-        $this->recObjetPerdus = new ArrayCollection();
+        $this->reclamations = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -61,12 +61,12 @@ class Utilisateur
 
     public function getNumCin(): ?int
     {
-        return $this->NumCin;
+        return $this->num_cin;
     }
 
-    public function setNumCin(int $NumCin): self
+    public function setNumCin(int $num_cin): self
     {
-        $this->NumCin = $NumCin;
+        $this->num_cin = $num_cin;
 
         return $this;
     }
@@ -120,34 +120,33 @@ class Utilisateur
     }
 
     /**
-     * @return Collection|RecObjetPerdu[]
+     * @return Collection|Reclamation[]
      */
-    public function getRecObjetPerdus(): Collection
+    public function getReclamations(): Collection
     {
-        return $this->recObjetPerdus;
+        return $this->reclamations;
     }
 
-    public function addRecObjetPerdu(RecObjetPerdu $recObjetPerdu): self
+    public function addReclamation(Reclamation $reclamation): self
     {
-        if (!$this->recObjetPerdus->contains($recObjetPerdu)) {
-            $this->recObjetPerdus[] = $recObjetPerdu;
-            $recObjetPerdu->setIdUtilisateur($this);
+        if (!$this->reclamations->contains($reclamation)) {
+            $this->reclamations[] = $reclamation;
+            $reclamation->setIdUtilisateur($this);
         }
 
         return $this;
     }
 
-    public function removeRecObjetPerdu(RecObjetPerdu $recObjetPerdu): self
+    public function removeReclamation(Reclamation $reclamation): self
     {
-        if ($this->recObjetPerdus->contains($recObjetPerdu)) {
-            $this->recObjetPerdus->removeElement($recObjetPerdu);
+        if ($this->reclamations->contains($reclamation)) {
+            $this->reclamations->removeElement($reclamation);
             // set the owning side to null (unless already changed)
-            if ($recObjetPerdu->getIdUtilisateur() === $this) {
-                $recObjetPerdu->setIdUtilisateur(null);
+            if ($reclamation->getIdUtilisateur() === $this) {
+                $reclamation->setIdUtilisateur(null);
             }
         }
 
         return $this;
     }
-
 }

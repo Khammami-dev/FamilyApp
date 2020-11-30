@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/Back/Home.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/front/AjoutRecPertePersonne.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/front/RecObjetPerdu/add.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/front/RecObjetPerdu/detail.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Help.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Help.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ObjetPerdutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ObjetPerdutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/AjoutRecPerteObjet.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/AjoutRecPerteObjet.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201114140607.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201114145054.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201115103300.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201115143115.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ObjetPerdutController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PersonnePerdutController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/CommisseriatPolice.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RecObjetPerdu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Utilisateur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CommisseriatPoliceRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RecObjetPerduRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UtilisateurRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/RecObjetPerdu/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/RecObjetPerdu/add.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +181,10 @@
       <workItem from="1604316575395" duration="1250000" />
       <workItem from="1604476362606" duration="288000" />
       <workItem from="1604480483253" duration="299000" />
-      <workItem from="1605341839737" duration="34840000" />
+      <workItem from="1605341839737" duration="37032000" />
+      <workItem from="1605513881942" duration="4610000" />
+      <workItem from="1606559134376" duration="19129000" />
+      <workItem from="1606714944550" duration="7204000" />
     </task>
     <servers />
   </component>
@@ -197,13 +196,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1604180267497" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605441786550">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606717204761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605441786550" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605386459441">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606717204761" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606715399888">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605386459441" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606715399888" />
   </component>
 </project>

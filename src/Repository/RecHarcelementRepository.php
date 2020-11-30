@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\RecObjetPerdu;
+use App\Entity\RecHarcelement;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method RecObjetPerdu|null find($id, $lockMode = null, $lockVersion = null)
- * @method RecObjetPerdu|null findOneBy(array $criteria, array $orderBy = null)
- * @method RecObjetPerdu[]    findAll()
- * @method RecObjetPerdu[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method RecHarcelement|null find($id, $lockMode = null, $lockVersion = null)
+ * @method RecHarcelement|null findOneBy(array $criteria, array $orderBy = null)
+ * @method RecHarcelement[]    findAll()
+ * @method RecHarcelement[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class RecObjetPerduRepository extends ServiceEntityRepository
+class RecHarcelementRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, RecObjetPerdu::class);
+        parent::__construct($registry, RecHarcelement::class);
     }
 
     // /**
-    //  * @return RecObjetPerdu[] Returns an array of RecObjetPerdu objects
+    //  * @return RecHarcelement[] Returns an array of RecHarcelement objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class RecObjetPerduRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?RecObjetPerdu
+    public function findOneBySomeField($value): ?RecHarcelement
     {
         return $this->createQueryBuilder('r')
             ->andWhere('r.exampleField = :val')
@@ -47,10 +47,4 @@ class RecObjetPerduRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function ObjetPerduPublique(){
-        $qb = $this->createQueryBuilder('op')->where('op.publique = 1');
-        $qb->orderBy('op.date', 'ASC');
-        return $qb->getQuery()->getResult();
-
-    }
 }
