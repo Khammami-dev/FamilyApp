@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/Back/Layout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201114140607.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201114145054.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201115103300.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201115143115.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ObjetPerdutController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PersonnePerdutController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/CommisseriatPolice.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/RecObjetPerdu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Utilisateur.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CommisseriatPoliceRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecObjetPerduRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UtilisateurRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RecPerteObjetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecPerteObjetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commisariat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commisariat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecPerteObjetType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecPerteObjetType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ReclamationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ReclamationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Back/Home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/Home.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/RecObjetPerdu/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/RecObjetPerdu/add.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +178,8 @@
       <workItem from="1605341839737" duration="37032000" />
       <workItem from="1605513881942" duration="4610000" />
       <workItem from="1606559134376" duration="19129000" />
-      <workItem from="1606714944550" duration="7204000" />
+      <workItem from="1606714944550" duration="29430000" />
+      <workItem from="1606802724855" duration="4901000" />
     </task>
     <servers />
   </component>
@@ -196,13 +191,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1604180267497" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606717204761">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606725445590">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606717204761" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606715399888">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606725445590" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606803704440">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606715399888" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606803704440" />
   </component>
 </project>

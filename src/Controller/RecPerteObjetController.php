@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Reclamation;
 use App\Entity\RecPerteObjet;
 use App\Form\ReclamationType;
 use App\Form\RecPerteObjetType;
@@ -28,27 +29,21 @@ class RecPerteObjetController extends AbstractController
         if (!$recObjet) {
             $recObjet = new RecPerteObjet();
             $form = $this->createForm(RecPerteObjetType::class);
-            $formRec = $this->createForm(ReclamationType::class);
             $form->remove('createdAt');
             $form->remove('updatedAt');
-            $formRec->remove('recPerteObjet');
-            $formRec->remove('recHarcelement');
-            $formRec->remove('recAttaque');
-            $formRec->remove('id_utilisateur');
-            $formRec->remove('validiter');
-            $formRec->remove('etat');
-            $formRec->remove('date');
+            $form->remove(ReclamationType::class, 'etat');
+           // $form->remove('validiter');
             $form->handleRequest($request);
-            if ($form->isSubmitted()) {
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($recObjet);
-                $em->flush();
-
-                return $this->redirectToRoute('home');
+            if($form->isSubmitted()) {
+                //add($form->getData());
+                $addRecObjet = $this->getDoctrine()->getManager();
+                $addRecObjet->persist($recObjet);
+                $addRecObjet->flush();
             }
+
             return $this->render('front/RecObjetPerdu/add.html.twig', [
                 'form' => $form->createView(),
-                'formRec' => $formRec->createView()
+
 
             ]);
         }
