@@ -37,23 +37,24 @@ class RecPertePersonneController extends AbstractController
         $form = $this->createForm(RecPertePersonneType::class, $recPertePersonne);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            //dd($form->getData());
-            $mediaInfos = $form->get('id_reclamation')->getData();
+           // dd($form->getData());
+            $mediaInfos = $form->get('id_reclamation')->get('Media')->getData();
+
 
             foreach( $mediaInfos  as $media){
-                $newImageName = md5(uniqid()).$media->geussExtension();
+                $imageName = $media->getClientOriginalName();
+                $newImageName = md5(uniqid()).$imageName;
                 $media->move(
                     $this->getParameter('RecPersonnePerdu_directory'),
                     $newImageName
                 );
                 $med=new Media();
                 $med->setPath($newImageName);
-                $reclamation->addIdMedium();
+                $recPertePersonne->getIdReclamation()->addIdMedium($med);
 
             }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($recPertePersonne);
-            $entityManager->persist($reclamation);
             $entityManager->flush();
 
             return $this->redirectToRoute('rec_perte_personne_index');

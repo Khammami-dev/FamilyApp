@@ -27,10 +27,12 @@ class ReclamationType extends AbstractType
             ->add('recAttaque',HiddenType::class)
             ->add('id_utilisateur',HiddenType::class)
             ->add('id_commissariat')
-            ->add('Media',FileType::class,[
+            ->add('Media',null,[
+                    'attr'  => [
+                        'class' => 'input-images'
+                    ],
                     'label' => 'Media',
                     'mapped' =>false,
-                    'multiple' => true,
                     'required' => false,
                 ])
 
@@ -42,6 +44,7 @@ class ReclamationType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Reclamation::class,
+
         ]);
     }
 }

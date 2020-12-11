@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Help.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Help.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RecPerteObjetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecPerteObjetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery-1.11.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RecPertePersonneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecPertePersonneController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Reclamation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reclamation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ReclamationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ReclamationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +142,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfoSi2020" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -183,6 +179,8 @@
       <workItem from="1607344590506" duration="2902000" />
       <workItem from="1607539567229" duration="8636000" />
       <workItem from="1607596680657" duration="13937000" />
+      <workItem from="1607675336175" duration="968000" />
+      <workItem from="1607676557319" duration="11263000" />
     </task>
     <servers />
   </component>
@@ -190,17 +188,29 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604180267497">
+    <state x="428" y="187" key="#Notifications" timestamp="1607676412074">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1604180267497" />
+    <state x="428" y="187" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1607676412074" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607676445772">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1607676445772" />
+    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607684953988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607684953988" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607346758814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607346758814" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606803704440">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607680182634">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606803704440" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607680182634" />
+    <state x="263" y="106" key="IDE.errors.dialog" timestamp="1607676311690">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="106" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1607676311690" />
   </component>
 </project>

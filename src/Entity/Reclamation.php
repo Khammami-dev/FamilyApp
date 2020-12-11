@@ -70,7 +70,7 @@ class Reclamation
     private $recAttaque;
 
     /**
-     * @ORM\OneToMany(targetEntity=Media::class, mappedBy="reclamation")
+     * @ORM\OneToMany(targetEntity=Media::class, mappedBy="reclamation",cascade={"persist"})
      */
     private $id_media;
 
