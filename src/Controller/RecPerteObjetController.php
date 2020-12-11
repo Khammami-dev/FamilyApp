@@ -31,7 +31,6 @@ class RecPerteObjetController extends AbstractController
             $form = $this->createForm(RecPerteObjetType::class);
             $form->remove('createdAt');
             $form->remove('updatedAt');
-            $form->remove(ReclamationType::class, 'etat');
            // $form->remove('validiter');
             $form->handleRequest($request);
             if($form->isSubmitted()) {

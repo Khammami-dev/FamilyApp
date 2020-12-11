@@ -1,0 +1,12 @@
+{% extends 'front/layout.html.twig' %}
+{% block title %}Ajouter réclamation perte des objets{% endblock %}
+{% block grandtitre %} Réclamation pour des personnes perdues {% endblock %}
+{% block body %}
+
+<div class=" col-9 m-3 center" style="margin-right: 20%;" >
+
+    {{ include('rec_perte_personne/_form.html.twig') }}
+
+    <a href="{{ path('rec_perte_personne_index') }}">back to list</a>
+</div>
+{% endblock %}

@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Reclamation;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -26,6 +27,13 @@ class ReclamationType extends AbstractType
             ->add('recAttaque',HiddenType::class)
             ->add('id_utilisateur',HiddenType::class)
             ->add('id_commissariat')
+            ->add('Media',FileType::class,[
+                    'label' => 'Media',
+                    'mapped' =>false,
+                    'multiple' => true,
+                    'required' => false,
+                ])
+
 
         ;
     }

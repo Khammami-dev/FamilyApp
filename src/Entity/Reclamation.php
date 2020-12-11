@@ -40,7 +40,7 @@ class Reclamation
     private $adresse;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
+     * @ORM\Column(type="boolean", options={"default" = "0"})
      */
     private $etat;
 
@@ -50,7 +50,7 @@ class Reclamation
     private $publique;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean",options={"default" = "1"})
      */
     private $validiter;
 
@@ -75,7 +75,7 @@ class Reclamation
     private $id_media;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Utilisateur::class, inversedBy="reclamations")
+     * @ORM\ManyToOne(targetEntity=Utilisateur::class, inversedBy="reclamations", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $id_utilisateur;
