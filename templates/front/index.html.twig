@@ -1,277 +1,303 @@
 
 {% extends 'front/layout.html.twig' %}
-{% block title %}Home{% endblock %}
-{% block grandtitre %} Les dérniéres annonces {% endblock %}
-{% block petittitre %} objet perdues {% endblock %}
 {% block body %}
-<!-- ***** Section personnes perdues ***** -->
-
-
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/1.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                             <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/2.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class=" pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/3.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/4.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="col-md-8 mx-auto text-center" >
-        <a class="btn btn-primary btn-lg " href="#">
-            Voir plus
-        </a>
-    </div>
-</section>
-<!-- ***** End section personnes perdues ***** -->
-
-
-
-<!-- ***** Section objets perdues ***** -->
-    <section class="sectionpt pt-5 pb-5" >
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-6">
-                    <!-- Section Heading -->
-                    <div class="text-center">
-                        <h3 class="text-capitalize pb-3">Des objets perdus</h3>
-
-                    </div>
-                </div>
-            </div>
+    <!-- HEADER-AREA-END -->
+    <!-- ABOUT-AREA-START -->
+    <section class="about-area section-padding">
+        <div class="container">
             <div class="row">
-                {%  for objetperdu in objetsperdus  %}
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <!-- Single Team -->
-                    <div class="rounded text-center m-2 m-lg-0">
-                        <!-- Team Thumb -->
-                        <div>
-                            <img src="{{ objetperdu.image }}" class="img-fluid rounded" alt="">
-                            <!-- Team Overlay -->
-                            <div class="pt-3">
-                                <h5>Junaid Hasan</h5>
-                                <h6 class="small">{{ objetperdu.titre }}</h6>
-                                <p>{{ objetperdu.description }}</p>
-                                <div class="pt-2">
-                                    <div class=" pt-2">
-                                        <a  href="#">
-                                            Lire la suite
-                                        </a>
-                                    </div>
-                                </div>
+                <div class="col-xs-12 text-center">
+                    <div class="page-title">
+                        <h2>About us</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="about-image-slide">
+                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <div class="about-text">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue imperdiet quam, ac rutrum dui porta at. Morbi posuere mi vitae ultricies tempor. Praesent eget urna a magna ornare bibendum a id ligula. Nullam fermen ipsum imperdiet laoreet pretium. Donec quis leo augue. </p>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultric posuere cubilia Curae; Integer ac elit et elit malesuada int eget nec est. Pellentesque euismod dui purus, ac consequat nisl volutpat eu.</p>
+
+                        <p>In nec semper nibh, in placerat ipsum. Nullam tempus gravida mi, et pellentesque arcu finibus id. Vivamus ut nibh vel le convallis lacinia id a nisi. Cras sit amet aliquam mi.</p>
+
+                        <p>Fusce a fermentum velit. Vestibulum porttitor justo eget orci faucibus, sed ornare ligula volutpat. Phasellus in lectus el, mollis ante sed, pharetra nibh. Mauris iaculis ex vel iaculis tempor.</p>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT-AREA-END -->
+    <!-- start Personnes perdus -->
+    <section class="blog-area blue-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="page-title">
+                        <h2>Réclamation des personnes perdues</h2>
+                    </div>
+                </div>
+                {% for RecObjetPerdu in RecObjetPerdus %}
+                   <div class="col-xs-12 col-sm-4">
+                    <div class="sinlge-blog">
+                        <div class="blog-thumb">
+                            {% for a in RecObjetPerdu.media %}
+                            <a href="#"><img src=" {{ a.path }}" alt="police"></a>
+                            {% endfor %}
+                        </div>
+                        <a href="#" title="we call of thieves">
+                            <h3>{{ RecObjetPerdu.titre }}</h3></a>
+                        <p> {{RecObjetPerdu.description }}    <a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
+                        <div class="meta-content">
+                            <div class="meta-date inline">
+                                <p><i class="fa fa-clock-o">{{ RecObjetPerdu.date|date('Y-m-d') }}</i>           </p>
+                            </div>
+                            <div class="meta-tag alignright">
+                                <span><i class="fa fa-eye"></i>154</span>
+                                <span><i class="fa fa-heart"></i>19</span>
+                                <span><i class="fa fa-comments"></i>35</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
+
+
             </div>
-                <div class="col-md-8 mx-auto text-center" >
-                    <a class="btn btn-primary btn-lg " href="#">
-                        Voir plus
+        </div>
+    </section>
+
+    <!-- End Personne perdus-->
+
+
+
+
+    <!-- start espace -->
+    <section class="client-area section-padding">
+        <div class="container">
+            <div class="center-block">
+                <div class="about-text-center">
+                    <a href="#" class="btn default-button blue-btn">
+                        Lire autres
+                        <span><i class="fa fa-angle-right"></i></span>
                     </a>
                 </div>
+            </div>
+        </div>
     </section>
-<!-- ***** End section objets perdues ***** -->
+    <!-- end espace -->
 
-<section class="sectionpt pt-5 pb-5" >
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-6">
-                <!-- Section Heading -->
-                <div class="text-center">
-                    <h3 class="text-capitalize pb-3">Des annonces des attaques à main armée</h3>
-
+    <section class="blog-area blue-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="page-title">
+                        <h2>Réclamation des objets perdues</h2>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/1.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="sinlge-blog">
+                        <div class="blog-thumb">
+                            <a href="#"><img src="{{ asset('front/images/blog/01_blog.jpg') }}" alt="police"></a>
+                        </div>
+                        <a href="#" title="we call of thieves">
+                            <h3>we call of thieves</h3></a>
+                        <p>Quisque ipsum magna, finibus eu hendrerit in, pellentesque ut velit. Nam tempus ultrices pulvinar lacus...<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
+                        <div class="meta-content">
+                            <div class="meta-date inline">
+                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
+                            </div>
+                            <div class="meta-tag alignright">
+                                <span><i class="fa fa-eye"></i>154</span>
+                                <span><i class="fa fa-heart"></i>19</span>
+                                <span><i class="fa fa-comments"></i>35</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/2.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class=" pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="sinlge-blog">
+                        <div class="blog-video">
+                            <div class="video-item embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5e7KKDN4VqA"></iframe>
+                            </div>
+                        </div>
+                        <a href="#" title="we are meetings">
+                            <h3>we are meetings</h3></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nisi quas, ratione. Velit omnis mollitia accusamus illo repellat vitae quaerat!<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
+                        <div class="meta-content">
+                            <div class="meta-date inline">
+                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
+                            </div>
+                            <div class="meta-tag alignright">
+                                <span><i class="fa fa-eye"></i>154</span>
+                                <span><i class="fa fa-heart"></i>19</span>
+                                <span><i class="fa fa-comments"></i>35</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/3.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
-                            </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="sinlge-blog">
+                        <div class="blog-thumb">
+                            <a href="#"><img src="{{ asset('front/images/blog/03_blog.jpg') }}" alt="police"></a>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- Single Team -->
-                <div class="rounded text-center m-2 m-lg-0">
-                    <!-- Team Thumb -->
-                    <div>
-                        <img src="img/4.jpg" class="img-fluid rounded" alt="">
-                        <!-- Team Overlay -->
-                        <div class="pt-3">
-                            <h5>Junaid Hasan</h5>
-                            <h6 class="small">Titre</h6>
-                            <p>Petite discription</p>
-                            <div class="pt-2">
-                                <div class=" pt-2">
-                                    <a  href="#">
-                                        Lire la suite
-                                    </a>
-                                </div>
+                        <a href="#" title="is eating some"><h3>is eating some</h3></a>
+                        <p>Quisque ipsum magna, finibus eu hendrerit in, pellentesque ut velit. Nam tempus ultrices pulvinar lacus...<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
+                        <div class="meta-content">
+                            <div class="meta-date inline">
+                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
+                            </div>
+                            <div class="meta-tag alignright">
+                                <span><i class="fa fa-eye"></i>154</span>
+                                <span><i class="fa fa-heart"></i>19</span>
+                                <span><i class="fa fa-comments"></i>35</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
+    <section class="client-area section-padding">
+        <div class="container">
+            <div class="center-block">
+                <div class="about-text-center">
+                    <a href="#" class="btn default-button blue-btn">
+                        Lire autres
+                        <span><i class="fa fa-angle-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-area blue-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="page-title">
+                        <h2>Réclamation des Brackages</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="sinlge-blog">
+                        <div class="blog-thumb">
+                            <a href="#"><img src="{{ asset('front/images/blog/01_blog.jpg') }}" alt="police"></a>
+                        </div>
+                        <a href="#" title="we call of thieves">
+                            <h3>we call of thieves</h3></a>
+                        <p>Quisque ipsum magna, finibus eu hendrerit in, pellentesque ut velit. Nam tempus ultrices pulvinar lacus...<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
+                        <div class="meta-content">
+                            <div class="meta-date inline">
+                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
+                            </div>
+                            <div class="meta-tag alignright">
+                                <span><i class="fa fa-eye"></i>154</span>
+                                <span><i class="fa fa-heart"></i>19</span>
+                                <span><i class="fa fa-comments"></i>35</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="sinlge-blog">
+                        <div class="blog-video">
+                            <div class="video-item embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5e7KKDN4VqA"></iframe>
+                            </div>
+                        </div>
+                        <a href="#" title="we are meetings">
+                            <h3>we are meetings</h3></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nisi quas, ratione. Velit omnis mollitia accusamus illo repellat vitae quaerat!<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
+                        <div class="meta-content">
+                            <div class="meta-date inline">
+                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
+                            </div>
+                            <div class="meta-tag alignright">
+                                <span><i class="fa fa-eye"></i>154</span>
+                                <span><i class="fa fa-heart"></i>19</span>
+                                <span><i class="fa fa-comments"></i>35</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="sinlge-blog">
+                        <div class="blog-thumb">
+                            <a href="#"><img src="{{ asset('front/images/blog/03_blog.jpg') }}" alt="police"></a>
+                        </div>
+                        <a href="#" title="is eating some"><h3>is eating some</h3></a>
+                        <p>Quisque ipsum magna, finibus eu hendrerit in, pellentesque ut velit. Nam tempus ultrices pulvinar lacus...<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
+                        <div class="meta-content">
+                            <div class="meta-date inline">
+                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
+                            </div>
+                            <div class="meta-tag alignright">
+                                <span><i class="fa fa-eye"></i>154</span>
+                                <span><i class="fa fa-heart"></i>19</span>
+                                <span><i class="fa fa-comments"></i>35</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="client-area section-padding">
+        <div class="container">
+            <div class="center-block">
+                <div class="about-text-center">
+                    <a href="#" class="btn default-button blue-btn">
+                        Lire autres
+                        <span><i class="fa fa-angle-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLATTER-AREA-START -->
+    <section class="newslatter-area section-padding text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="page-title">
+                        <h2>Newslatter</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <div class="newslatter">
+                        <div class="newslatter-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet dapibus felis sit amet consequat. Nulla nec sodales nibh. Phasellus vehicula ante sed dictum varius. Sed ullamcorper augue.</p>
+                        </div>
+                        <!-- SUBSCRIBE-FORM-START -->
+                        <div class="subscribe-form">
 
 
-
-
-
-
-
-    <div class="col-md-8 mx-auto text-center" >
-        <a class="btn btn-primary btn-lg " href="#">
-            Voir plus
-        </a>
-    </div>
-</section>
+                            <form action="#">
+                                <input type="email" placeholder="Your Email Here...">
+                                <input type="submit" value="Submit Now" title="Submit Now">
+                            </form>
+                        </div>
+                        <!-- SUBSCRIBE-FORM-START -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- NEWSLATTER-AREA-END -->
+    <!-- FOOTER-AREA-START -->
 {% endblock %}

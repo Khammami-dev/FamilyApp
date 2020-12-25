@@ -13,11 +13,21 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        //$repository=$this->getDoctrine()->getRepository(RecObjetPerdu::class);
-        //$objetsperdus = $repository->ObjetPerduPublique();
+        $repository=$this->getDoctrine()->getRepository(RecObjetPerdu::class);
+        $RecObjetPerdus= $repository->findBy(
+            ['publique' => 1],
+            ['date'=>'desc'],
+            3
+        );
+
+
+
+
+
 
         return $this->render('front/index.html.twig', [
             'controller_name' => 'HomeController',
+            'RecObjetPerdus' => $RecObjetPerdus
 
         ]);
     }

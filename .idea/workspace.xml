@@ -3,11 +3,47 @@
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery-1.11.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RecPertePersonneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecPertePersonneController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Reclamation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reclamation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ReclamationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ReclamationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201128204140.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201130081515.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201130123140.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201209210442.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201210110845.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201211100230.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201211101638.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RecPerteObjetController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RecPertePersonneController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commisariat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Media.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RecAttaque.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RecHarcelement.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RecPerteObjet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RecPertePersonne.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Reclamation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Utilisateur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/MediaType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecPerteObjetType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecPertePersonneType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ReclamationType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CommisariatRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/MediaRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RecAttaqueRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RecHarcelementRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RecPerteObjetRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RecPertePersonneRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ReclamationRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UtilisateurRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/RecObjetPerdu/add.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/RecObjetPerdu/detail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/show.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +216,14 @@
       <workItem from="1607539567229" duration="8636000" />
       <workItem from="1607596680657" duration="13937000" />
       <workItem from="1607675336175" duration="968000" />
-      <workItem from="1607676557319" duration="11263000" />
+      <workItem from="1607676557319" duration="36661000" />
+      <workItem from="1607765514133" duration="28099000" />
+      <workItem from="1607856412832" duration="3000" />
+      <workItem from="1608469360879" duration="1221000" />
+      <workItem from="1608573173951" duration="8041000" />
+      <workItem from="1608746642391" duration="8558000" />
+      <workItem from="1608839554715" duration="1966000" />
+      <workItem from="1608891280199" duration="3183000" />
     </task>
     <servers />
   </component>
@@ -200,14 +243,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607684953988" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607346758814">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607768567586">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607346758814" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607680182634">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607768567586" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1608891699377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607680182634" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608891699377" />
     <state x="263" y="106" key="IDE.errors.dialog" timestamp="1607676311690">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

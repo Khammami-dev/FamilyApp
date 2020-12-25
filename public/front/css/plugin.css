@@ -1,0 +1,7 @@
+.testimonial-area .carousel-indicators {
+    bottom: -50px;
+}
+
+.testimonial-area .carousel-indicators li {
+    border: 2px solid #fff;
+}

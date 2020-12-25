@@ -1,121 +1,148 @@
 <!doctype html>
-<html lang="en">
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zxx">
+<!--<![endif]-->
+
 <head>
-    <!-- Required meta tags -->
+    <!--====== USEFULL META ======-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="body guard,business,emergency,fire department,Fire Fighters,officer, police,police department, protection,safety,security,visual composer,volunteer" />
+    <meta name="author" content="BDEXPERT" />
 
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('select2-4.0.10/dist/css/select2.min.css') }}" rel="stylesheet" />
+    <!--====== TITLE TAG ======-->
+    <title>Police International | Home</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="{{ asset('jquery-image-uploader-preview-and-delete/dist/image-uploader.min.css')}}">
-    <title>
-        {% block title %}
-            Help.tn
-        {% endblock %}
-    </title>
-    {% for message in app.session.flashBag.get('error') %}
-        <div class="alert alert-danger">
-            {{ message }}
-        </div>
-    {% endfor %}
-    {% for message in app.session.flashBag.get('success') %}
-        <div class="alert alert-success">
-            {{ message }}
-        </div>
-    {% endfor %}
-    {% for message in app.session.flashBag.get('info') %}
-        <div class="alert alert-info">
-            {{ message }}
-        </div>
-    {% endfor %}
+    <!--====== GOOGLE FONTS ======-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!--====== STYLESHEETS ======-->
+    <link rel="stylesheet" href="{{asset('front/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/owl.carousel.css')}}">
+    <link href="{{ asset('front/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/css/animate.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset ('front/css/lightbox.css') }}">
+    <link href="{{ asset('front/css/plugin.css') }}" rel="stylesheet">
+    <!--======= FAVICON ========-->
+    <link rel="shortcut icon" type="image/ico" href="{{ asset('front/images/favicon.png') }}" />
+    <!--====== MAIN STYLESHEET ======-->
+    <link href="{{ asset('front/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/css/responsive.css') }}" rel="stylesheet">
+    <!--======= MODERNIZR JS ========-->
+    <script src="{{ asset('front/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-<div class="bg-transparent nav-top-position">
-    <nav class="container navbar navbar-expand-lg navbar-dark bg-transparent logo-small">
-        <a class="navbar-brand font-weight-bold" href="#"><img src="img/logo-white.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-3">
-                <li class="nav-item active ">
-                    <a class="nav-link" href="{{ path('home') }}">
-                        Acceuil
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Réclamation
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ path('add_rec_perte_objet') }}">Réclamation des objets perdus</a>
-                        <a class="dropdown-item" href="#">Réclamation des personnes perdus</a>
-                        <a class="dropdown-item" href="#">Réclamation d'attaque à main harmée</a>
-                        <a class="dropdown-item" href="#">Réclamation d'harcélement sexuel</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- HEADER-AREA-START-->
+<header class="header-area">
+    <!-- HEADER-TOP-AREA-START -->
+    <div class="header-top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12 xs-center">
+                    <div class="logo">
+                        <a href="index.html" title="Police">
+                            <!-- LOGO-IMAGE -->
+                            <img src="{{ asset('front/images/logo.png') }}" alt="police">
+                        </a>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Envoyer une Alerte d'urgence</a>
-                </li>
-            </ul>
-            <div>
-                <a class="btn btn-primary btn-lg" href="#">
-                    Inscription
-                </a>
-            </div>
-        </div>
-    </nav>
-</div>
-<!-------------Navbar ends here------------------->
-<div class="hero-banner d-flex align-items-center" style="background-image: url('{{ asset("img/Police-Tunisie.jpg") }}')">
-    <div class="container py-5">
-        <div class="row py-5">
-            <div class="col-md-8 mx-auto text-center text-white">
-                <h1 class="mb-4 text-white font-weight-bold">Envoyez nous une alerte en cas d'urgence !</h1>
-                <div class="pt-4">
-                    <a href="#" class="btn btn-danger btn-lg">Envoyer une alerte d'urgence</a>
+                </div>
+                <div class="col-sm-8 xs-none text-right">
+                    <div class="contact-info">
+                        <div class="phone">
+                            <a href="callto:+18002345678" title="+1 800 234 5678"><i class="fa fa-phone"></i>+1 800 234 5678</a>
+                        </div>
+                        <div class="email">
+                            <a href="mailto:info@police.com" title="info@police.com"><i class="fa fa-envelope"></i>info@police.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- ***** Section personnes perdues ***** -->
-<section class="sectionpt pt-5 pb-5" >
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-6">
-                <!-- Section Heading -->
-                <div class="text-center">
-                    <h2 class="text-capitalize pb-3">
-                        {% block grandtitre %}
-
-                        {% endblock %}
-                    </h2>
-                    <h3 class="text-capitalize pb-3">
-                        {% block petittitre %}
-
-                        {% endblock %}
-                    </h3>
-
+    <!-- HEADER-TOP-AREA-END -->
+    <!-- MAINMENU-AREA-START -->
+    <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="mainmenu">
+                    <div class="col-xs-12">
+                        <nav class="navbar" id="navbar-example2">
+                            <div class="navbar-header">
+                                <button class="collapsed navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="index.html" title="Home">HOME</a></li>
+                                    <li><a href="about.html" title="About Us">Réclamation objet perdus</a></li>
+                                    <li><a href="service.html" title="Services">Réclamation Personnes perdues</a></li>
+                                    <li><a href="gallery.html" title="Gallery">Réclamation Brackage</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div id="sb-search" class="sb-search search-box">
+                            <form>
+                                <input class="sb-search-input" placeholder="Search..." type="text" value="" name="search" id="search">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-</section>
-<!-- ***** End section personnes perdues ***** -->
-
-
-
-
+    </div>
+    <!-- MAINMENU-AREA-END -->
+    <!-- HEADER-TEXT-SLIDE-START -->
+    <div class="header-text-area">
+        <div class="header-text-carousel text-center">
+            <div class="header-single-text">
+                <div class="header-bg header-bg-1"></div>
+                <h1>welcome to police <br />international</h1>
+                <a href="#" class="btn default-button blue-btn" title="inscription">Inscription</a>
+                <a href="contact.html" class="btn default-button red-btn" title="Contact us">Alerte d'urgence</a>
+            </div>
+            <div class="header-single-text">
+                <div class="header-bg header-bg-2"></div>
+                <h1>if you run you'll <br /> only die tired</h1>
+                <a href="#" class="btn default-button blue-btn" title="Read more">Inscription</a>
+                <a href="contact.html" class="btn default-button red-btn" title="Contact us">Alerte d'urgence</a>
+            </div>
+            <div class="header-single-text">
+                <div class="header-bg header-bg-3"></div>
+                <h1>Welcome to our  <br /> Website</h1>
+                <a href="#" class="btn default-button blue-btn" title="Read more">Inscription</a>
+                <a href="contact.html" class="btn default-button red-btn" title="Contact us">Alerte d'urgence</a>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER-TEXT-SLIDE-END-->
+</header>
 
 {% block body %}
+
 {% endblock %}
 
 
@@ -123,56 +150,95 @@
 
 
 
-<!--====== Footer Area Start ======-->
-<footer class="pt-5">
-    <!-- Footer Top -->
-    <div class="py-3" id="foot-top">
-        <div class="container">
-            <div class="row">
-                <!-- Footer Items -->
-                <div class="footer-items">
-                    <!-- Footer Title -->
-                    <h5 class="mb-3">Contactes des urgences</h5>
-                    <ul class="list-unstyled small">
-                        <li class="pt-2">Police secours : 197</li>
-                        <li class="pt-2">Ambulance médicalisées : 71 780 000 ou 71 781 000 </li>
-                        <li class="pt-2">SOS Ambulances : 71 725 555 ou 71 599 900</li>
-                        <li class="pt-2">Urgence le secour : 71 351 000 </li>
-                    </ul>
+
+
+
+
+<footer class="footer-area section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- SINGLE-FOOTER-START -->
+            <div class="col-xs-12 col-sm-8 col-md-4 ">
+                <div class="single-footer">
+                    <h3>About <span>Selfsecurity</span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum molestiae facilis distinctio aut! Saepe reprehenderit a culpa iusto deserunt consectetur architecto vel aspernatur sequi nam accusantium praesentium placeat eveniet, minus.</p>
+                    <div class="social-list">
+                        <a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" data-toggle="tooltip" title="Google plus"><i class="fa fa-google-plus"></i></a>
+                        <a href="#" data-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGLE-FOOTER-END -->
+            <!-- SINGLE-FOOTER-START -->
+            <div class="col-xs-12 col-sm-4 col-md-2">
+                <div class="single-footer">
+                    <h3>Link</h3>
+                    <div class="link">
+                        <ul>
+                            <li><a href="index.html" title="Home">Home</a></li>
+                            <li><a href="about.html" title="About Us">About Us</a></li>
+                            <li><a href="service.html" title="Service">Services</a></li>
+                            <li><a href="gallery.html" title="Gallery">Gallery</a></li>
+                            <li><a href="team.html" title="Gallery">Team</a></li>
+                            <li><a href="testimonial.html" title="Testimonials">Testimonials</a></li>
+                            <li><a href="contact.html" title="Contact Us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGLE-FOOTER-END -->
+            <!-- SINGLE-FOOTER-START -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="single-footer">
+                    <h3>Letest Events</h3>
+                    <div class="single-events">
+                        <div class="event-date">
+                            22 <span>July</span>
+                        </div>
+                        <a href="#" title="Search an thieves"><h4>Search an thieves</h4></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quam.</p>
+                    </div>
+                    <div class="single-events">
+                        <div class="event-date">
+                            22 <span>July</span>
+                        </div>
+                        <a href="#" title="Search an thieves"><h4>Search an thieves</h4></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quam.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGLE-FOOTER-END -->
+            <!-- SINGLE-FOOTER-START -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="single-footer">
+                    <h3>Info contact</h3>
+                    <div class="single-info">
+                        <a href="#" title="www.example.com"><span><i class="fa fa-globe"></i></span>www.example.com</a>
+                    </div>
+                    <div class="single-info">
+                        <a href="#" title="info@example.com"><span><i class="fa fa-envelope"></i></span>info@example.com</a>
+                    </div>
+                    <div class="single-info">
+                        <a href="#" title="+1 800 234 5678"><span><i class="fa fa-phone"></i></span>+1 800 234 5678</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer Bottom -->
-    <div class="container" id="Footer-Bottom">
-        <div class="row" id="Footer-copyright">
-            <!-- Copyright Area -->
-            <div class="d-flex flex-wrap justify-content-center justify-content-sm-between text-center py-4">
-                <!-- Copyright Left -->
-                <div class="small font-weight-bold">&copy; Copyrights 2020 thisApp All rights reserved.</div>
-
-            </div>
-        </div>
-
-    </div>
 </footer>
-<!--====== Footer Area End ======-->
-</div>
+<!-- FOOTER-AREA-END -->
+<!--=======  SCRIPTS =======-->
+<script src="{{ asset('front/js/vendor/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('front/js/vendor/bootstrap.min.js') }}" type="text/javascript"></script>
 
-
-
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="{{ asset('select2-4.0.10/dist/js/select2.min.js') }}"></script>
-        <script src="https://kit.fontawesome.com/b31e06099e.js" crossorigin="anonymous"></script>
-        <script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-         <script type="text/javascript" src="{{ asset('jquery-image-uploader-preview-and-delete/dist/image-uploader.min.js')}}"></script>
-<script>
-    $('.input-images').imageUploader();
-</script>
+<!--=======  PLUGINS =======-->
+<script src="{{ asset('front/js/lightbox.js') }}"></script>
+<script src="{{ asset('front/js/jquery.circlechart.js') }}"></script>
+<script src="{{ asset('front/js/owl.carousel.min.js') }}" type="text/javascript"></script>
+<!--=======  ACTIVE JS =======-->
+<script src="{{ asset('front/js/main.js') }}" type="text/javascript"></script>
 </body>
+
 </html>
