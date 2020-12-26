@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\RecObjetPerdu;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -29,15 +31,34 @@ class RecObjetPerduType extends AbstractType
                 )
             ])
             ->add('etat')
-            ->add('publique')
             ->add('validiter')
-            ->add('categorie')
+            ->add('categorie',ChoiceType::class,[
+                        'choices'  => [
+                    'SmartPhone'=>'SmartPhone',
+                    'Voiture'=>'Voiture',
+                    'Documents personnels' => 'Documents personnels',
+                    'Argent'=>'Argent',
+                    'Ordinateur'=>'Ordinateur',
+                    'Sac à main'=>'Sac à main',
+                    'Vétements'=>'Vétements',
+
+
+                ],
+                'attr' => array(
+                    'class'=>'select2'
+                )
+
+            ])
             ->add('marque')
             ->add('dateperte')
             ->add('modele')
             ->add('couleur')
             ->add('numSerie')
-            ->add('commisariatPolice')
+            ->add('commisariatPolice', null,[
+                'attr' => array(
+                    'class'=>'select2'
+                )
+            ])
             ->add('user')
            ->add('Media',FileType::class,[
                 'label' => 'Media',
@@ -49,6 +70,14 @@ class RecObjetPerduType extends AbstractType
                 'label' => 'Description',
                     'attr' => array(
                         'placeholder' => 'Si vous avez plus des détails'
+                    )
+                ]
+            )
+            ->add('publique',CheckboxType::class,[
+                    'required' => true,
+
+                    'attr' => array(
+                        'placeholder' => 'Si vous choisisez publique votre réclamation vas étre publier dans notre site'
                     )
                 ]
             )

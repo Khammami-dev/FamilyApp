@@ -33,6 +33,8 @@ class RecObjetPerduController extends AbstractController
     {
         $recObjetPerdu = new RecObjetPerdu();
         $form = $this->createForm(RecObjetPerduType::class, $recObjetPerdu);
+        $form->remove('etat');
+        $form->remove('validiter');
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
