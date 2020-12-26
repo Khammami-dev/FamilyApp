@@ -96,15 +96,6 @@ class RecPersonnePerdue
      */
     private $user;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Medias::class, mappedBy="recPersonnePerdue")
-     */
-    private $medias;
-
-    public function __construct()
-    {
-        $this->medias = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -291,33 +282,5 @@ class RecPersonnePerdue
         return $this;
     }
 
-    /**
-     * @return Collection|Medias[]
-     */
-    public function getMedias(): Collection
-    {
-        return $this->medias;
-    }
 
-    public function addMedia(Medias $media): self
-    {
-        if (!$this->medias->contains($media)) {
-            $this->medias[] = $media;
-            $media->setRecPersonnePerdue($this);
-        }
-
-        return $this;
-    }
-
-    public function removeMedia(Medias $media): self
-    {
-        if ($this->medias->removeElement($media)) {
-            // set the owning side to null (unless already changed)
-            if ($media->getRecPersonnePerdue() === $this) {
-                $media->setRecPersonnePerdue(null);
-            }
-        }
-
-        return $this;
-    }
 }

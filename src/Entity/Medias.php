@@ -28,9 +28,9 @@ class Medias
     private $type;
 
     /**
-     * @ORM\ManyToOne(targetEntity=RecObjetPerdu::class, inversedBy="media")
+     * @ORM\ManyToOne(targetEntity=RecObjetPerdu::class, inversedBy="medias", cascade={"persist"})
      */
-    private $recObjetPerdu;
+    private $RecObjetPerdu;
 
     public function getId(): ?int
     {
@@ -63,14 +63,13 @@ class Medias
 
     public function getRecObjetPerdu(): ?RecObjetPerdu
     {
-        return $this->recObjetPerdu;
+        return $this->RecObjetPerdu;
     }
 
-    public function setRecObjetPerdu(?RecObjetPerdu $recObjetPerdu): self
+    public function setRecObjetPerdu(?RecObjetPerdu $RecObjetPerdu): self
     {
-        $this->recObjetPerdu = $recObjetPerdu;
+        $this->RecObjetPerdu = $RecObjetPerdu;
 
         return $this;
     }
-
 }

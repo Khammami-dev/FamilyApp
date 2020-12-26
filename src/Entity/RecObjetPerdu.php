@@ -102,20 +102,15 @@ class RecObjetPerdu
     private $user;
 
     /**
-     * @ORM\OneToMany(targetEntity=Medias::class, mappedBy="recObjetPerdu",cascade={"persist"})
+     * @ORM\OneToMany(targetEntity=Medias::class, mappedBy="RecObjetPerdu",cascade={"persist"})
      */
     private $medias;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Medias::class, mappedBy="recObjetPerdu")
-     */
-    private $media;
 
     public function __construct()
     {
         $this->medias = new ArrayCollection();
-        $this->media = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -344,33 +339,4 @@ class RecObjetPerdu
         return $this;
     }
 
-    /**
-     * @return Collection|Medias[]
-     */
-    public function getMedia(): Collection
-    {
-        return $this->media;
-    }
-
-    public function addMedium(Medias $medium): self
-    {
-        if (!$this->media->contains($medium)) {
-            $this->media[] = $medium;
-            $medium->setRecObjetPerdu($this);
-        }
-
-        return $this;
-    }
-
-    public function removeMedium(Medias $medium): self
-    {
-        if ($this->media->removeElement($medium)) {
-            // set the owning side to null (unless already changed)
-            if ($medium->getRecObjetPerdu() === $this) {
-                $medium->setRecObjetPerdu(null);
-            }
-        }
-
-        return $this;
-    }
 }

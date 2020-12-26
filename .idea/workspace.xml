@@ -2,48 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/front/layoutsec.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201128204140.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201130081515.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201130123140.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201209210442.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201210110845.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201211100230.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201211101638.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RecPerteObjetController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RecPertePersonneController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Commisariat.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Media.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/RecAttaque.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/RecHarcelement.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/RecPerteObjet.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/RecPertePersonne.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Reclamation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Utilisateur.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/MediaType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecPerteObjetType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecPertePersonneType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ReclamationType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CommisariatRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/MediaRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecAttaqueRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecHarcelementRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecPerteObjetRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecPertePersonneRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ReclamationRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UtilisateurRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/RecObjetPerdu/add.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/RecObjetPerdu/detail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/contact-header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/images/contact-header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Medias.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RecObjetPerdu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RecObjetPerdu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RecPersonnePerdue.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RecPersonnePerdue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/MediasRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_perte_personne/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/rec_objet_perdu/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/rec_objet_perdu/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/rec_objet_perdu/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/rec_objet_perdu/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/rec_objet_perdu/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/rec_objet_perdu/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +194,9 @@
       <workItem from="1608573173951" duration="8041000" />
       <workItem from="1608746642391" duration="8558000" />
       <workItem from="1608839554715" duration="1966000" />
-      <workItem from="1608891280199" duration="3183000" />
+      <workItem from="1608891280199" duration="13480000" />
+      <workItem from="1608982806017" duration="3058000" />
+      <workItem from="1609003976068" duration="11517000" />
     </task>
     <servers />
   </component>

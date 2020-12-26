@@ -44,23 +44,28 @@
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <div class="page-title">
-                        <h2>Réclamation des personnes perdues</h2>
+                        <h2>Réclamation des objets perdues</h2>
                     </div>
                 </div>
                 {% for RecObjetPerdu in RecObjetPerdus %}
                    <div class="col-xs-12 col-sm-4">
                     <div class="sinlge-blog">
+                        {% if RecObjetPerdu.medias  %}
+                            {% for a in RecObjetPerdu.medias %}
                         <div class="blog-thumb">
-                            {% for a in RecObjetPerdu.media %}
-                            <a href="#"><img src=" {{ a.path }}" alt="police"></a>
-                            {% endfor %}
+
+                            <img  width="150px" height="150px" src=" {{a.path }}" alt="police">
+
                         </div>
+                            {% endfor %}
+                        {% endif %}
                         <a href="#" title="we call of thieves">
                             <h3>{{ RecObjetPerdu.titre }}</h3></a>
-                        <p> {{RecObjetPerdu.description }}    <a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
+                        <p> {{RecObjetPerdu.description }}<a href="{{ path('rec_objet_perdu_show', {id: RecObjetPerdu.id})  }}" class="btn">Voir détails <i class="fa fa-angle-double-right "></i></a></p>
                         <div class="meta-content">
                             <div class="meta-date inline">
-                                <p><i class="fa fa-clock-o">{{ RecObjetPerdu.date|date('Y-m-d') }}</i>           </p>
+                                <p><i class="fa fa-clock-o"></i>Date de publication: {{ RecObjetPerdu.date|date('Y-m-d') }} </p>
+                                <p><i class="fa fa-clock-o"></i>Date de perte: {{ RecObjetPerdu.dateperte|date('Y-m-d') }} </p>
                             </div>
                             <div class="meta-tag alignright">
                                 <span><i class="fa fa-eye"></i>154</span>
@@ -87,7 +92,7 @@
         <div class="container">
             <div class="center-block">
                 <div class="about-text-center">
-                    <a href="#" class="btn default-button blue-btn">
+                    <a href="{{ path('rec_objet_perdu_index') }}" class="btn default-button blue-btn">
                         Lire autres
                         <span><i class="fa fa-angle-right"></i></span>
                     </a>
@@ -175,7 +180,7 @@
         <div class="container">
             <div class="center-block">
                 <div class="about-text-center">
-                    <a href="#" class="btn default-button blue-btn">
+                    <a href="{{ path('rec_objet_perdu_index') }}" class="btn default-button blue-btn">
                         Lire autres
                         <span><i class="fa fa-angle-right"></i></span>
                     </a>
@@ -260,7 +265,7 @@
         <div class="container">
             <div class="center-block">
                 <div class="about-text-center">
-                    <a href="#" class="btn default-button blue-btn">
+                    <a href="{{ asset('rec_objet_perdu_index') }}" class="btn default-button blue-btn">
                         Lire autres
                         <span><i class="fa fa-angle-right"></i></span>
                     </a>

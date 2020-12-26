@@ -1,61 +1,39 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}RecObjetPerdu index{% endblock %}
+{% extends 'front/layoutsec.html.twig' %}
 
 {% block body %}
-    <h1>RecObjetPerdu index</h1>
+    <h2>Toute les Réclamations des objets perdus</h2>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Date</th>
-                <th>Localisation</th>
-                <th>Adresse</th>
-                <th>Description</th>
-                <th>Etat</th>
-                <th>Publique</th>
-                <th>Validiter</th>
-                <th>Categorie</th>
-                <th>Marque</th>
-                <th>Dateperte</th>
-                <th>Modele</th>
-                <th>Couleur</th>
-                <th>NumSerie</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for rec_objet_perdu in rec_objet_perdus %}
-            <tr>
-                <td>{{ rec_objet_perdu.id }}</td>
-                <td>{{ rec_objet_perdu.titre }}</td>
-                <td>{{ rec_objet_perdu.date ? rec_objet_perdu.date|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ rec_objet_perdu.localisation }}</td>
-                <td>{{ rec_objet_perdu.adresse }}</td>
-                <td>{{ rec_objet_perdu.description }}</td>
-                <td>{{ rec_objet_perdu.etat ? 'Yes' : 'No' }}</td>
-                <td>{{ rec_objet_perdu.publique ? 'Yes' : 'No' }}</td>
-                <td>{{ rec_objet_perdu.validiter ? 'Yes' : 'No' }}</td>
-                <td>{{ rec_objet_perdu.categorie }}</td>
-                <td>{{ rec_objet_perdu.marque }}</td>
-                <td>{{ rec_objet_perdu.dateperte ? rec_objet_perdu.dateperte|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ rec_objet_perdu.modele }}</td>
-                <td>{{ rec_objet_perdu.couleur }}</td>
-                <td>{{ rec_objet_perdu.numSerie }}</td>
-                <td>
-                    <a href="{{ path('rec_objet_perdu_show', {'id': rec_objet_perdu.id}) }}">show</a>
-                    <a href="{{ path('rec_objet_perdu_edit', {'id': rec_objet_perdu.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="16">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="service-area">
+        <div class="container">
+            <!-- SINGLE-SERVICE-START -->
+            {% for rec_objet_perdu in rec_objet_perdus %}
+            <div class="row  padding-top">
+                <div class="col-xs-12 col-sm-6">
+                    {% for a in rec_objet_perdu.media %}
+                    <div class="service-thumb">
+                        <img src="{{a.path }}" alt="">
+                        <h3 class="service-thumb-title">We make a very good security</h3>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="service-details">
+                        <p>
 
-    <a href="{{ path('rec_objet_perdu_new') }}">Create new</a>
+                                    {{ rec_objet_perdu.titre }}
+                                   {{ rec_objet_perdu.date ? rec_objet_perdu.date|date('Y-m-d H:i:s') : '' }}
+                                    {{ rec_objet_perdu.localisation }}
+                                    {{ rec_objet_perdu.description }}
+                                    {{ rec_objet_perdu.dateperte ? rec_objet_perdu.dateperte|date('Y-m-d H:i:s') : '' }}
+                        </p>
+
+                        <a href="#" class="blue-btn btn">Read more</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- SINGLE-SERVICE-END -->
+
+        </div>
+    </div>
 {% endblock %}
