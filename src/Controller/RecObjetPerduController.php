@@ -80,11 +80,21 @@ class RecObjetPerduController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+    /**
+     * @Route("/{id}", name="rec_objet_perdu_show", methods={"GET"})
+     */
+    public function show(RecObjetPerdu $recObjetPerdu): Response
+    {
+        return $this->render('front/rec_objet_perdu/show.html.twig', [
+            'rec_objet_perdu' => $recObjetPerdu,
+        ]);
+    }
+
 
     /**
      * @Route("/admin/detail/{id}", name="rec_objet_perdu_admin_show")
      */
-    public function show($id)
+    public function showAdmin($id)
 
     {
         $repository = $this->getDoctrine()->getRepository(RecObjetPerdu::class);
@@ -103,24 +113,36 @@ class RecObjetPerduController extends AbstractController
 
 
     /**
-     * @Route("/{id}/edit", name="rec_objet_perdu_edit", methods={"GET","POST"})
+     * @Route("/admin/{id}/edit", name="rec_objet_perdu_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, RecObjetPerdu $recObjetPerdu): Response
+    public function edit(Request $request, RecObjetPerdu $recObjetPerdu,$id): Response
     {
-        $form = $this->createForm(RecObjetPerduType::class, $recObjetPerdu);
-        $form->handleRequest($request);
+        $repository = $this->getDoctrine()->getRepository(RecObjetPerdu::class);
+        $RecObjetPerdu = $repository->find($id);
+        if (!$RecObjetPerdu) {
+            $this->addFlash('error', 'Réclamation inexistante innexistante');
+            return $this->redirectToRoute('rec_objet_perdu_admin_index');
+        } else {
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+            $form = $this->createForm(RecObjetPerduType::class, $recObjetPerdu);
+            $form->handleRequest($request);
 
-            return $this->redirectToRoute('rec_objet_perdu_index');
+
+            if ($form->isSubmitted() && $form->isValid()) {
+
+
+                $doctrine = $this->getDoctrine();
+                $manager = $doctrine->getManager();
+                $manager->persist($RecObjetPerdu);
+
+                return $this->redirectToRoute('rec_objet_perdu_admin_index');
+            }
+
+            return $this->render('Back/RecObjet/edit.html.twig', [
+                'rec_objet_perdu' => $recObjetPerdu,
+                'form' => $form->createView(),
+            ]);
         }
 
-        return $this->render('front/rec_objet_perdu/edit.html.twig', [
-            'rec_objet_perdu' => $recObjetPerdu,
-            'form' => $form->createView(),
-        ]);
     }
-
-
 }

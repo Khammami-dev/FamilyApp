@@ -1,0 +1,14 @@
+{% extends 'Back/Layout.html.twig' %}
+{% block body %}
+    {% block title %}
+
+    {% endblock %}
+
+
+    {{ form_row(form.etat) }}
+    {{ form_row(form.validiter) }}
+
+
+    <button class="btn">{{ button_label|default('Save') }}</button>
+
+{% endblock %}
