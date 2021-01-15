@@ -50,15 +50,19 @@
                 {% for RecObjetPerdu in RecObjetPerdus %}
                    <div class="col-xs-12 col-sm-4">
                     <div class="sinlge-blog">
-                        {% if RecObjetPerdu.medias  %}
+
                             {% for a in RecObjetPerdu.medias %}
                         <div class="blog-thumb">
 
-                            <img  width="150px" height="150px" src=" {{a.path }}" alt="police">
-
+                            <img width="150px" height="150px" {% if ('http' in a.path) %}
+                                        src="{{ a.path }}"
+                                    {% else %}
+                                        src="{{ asset(a.path) }}"
+                                    {% endif %}
+                                    class="rounded-circle">
                         </div>
                             {% endfor %}
-                        {% endif %}
+
                         <a href="#" title="we call of thieves">
                             <h3>{{ RecObjetPerdu.titre }}</h3></a>
                         <p> {{RecObjetPerdu.description }}<a href="{{ path('rec_objet_perdu_show', {id: RecObjetPerdu.id})  }}" class="btn">Voir détails <i class="fa fa-angle-double-right "></i></a></p>

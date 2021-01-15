@@ -1,0 +1,103 @@
+{% extends 'Back/Layout.html.twig' %}
+{% block body %}
+    {% block title %}
+
+    {% endblock %}
+    <div class="contact-area section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-md-4">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th>Titre</th>
+                            <td>{{ rec_objet_perdu.titre}}</td>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <td>{{ rec_objet_perdu.date ? rec_objet_perdu.date|date('Y-m-d H:i:s') : '' }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Localisation</th>
+                            <td>{{ rec_objet_perdu.localisation }}</td>
+                        </tr>
+                        <tr>
+                            <th>Adresse</th>
+                            <td>{{ rec_objet_perdu.adresse }}</td>
+                        </tr>
+                        {% if rec_objet_perdu.description != null%}
+                            <tr>
+                                <th>Description</th>
+                                <td>{{ rec_objet_perdu.description }}</td>
+                            </tr>
+                        {%endif%}
+                        <tr>
+                            <th>Etat</th>
+                            <td>{% if rec_objet_perdu.etat ==0 %}
+                                    <span class="badge bg-danger" style="color: #FFFFFF"> Pas encore trouvé </span>
+                                {% else %}
+                                    <span class="badge bg-success" style="color: #FFFFFF"> trouvé </span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Validiter de la réclamation</th>
+                            <td>{% if rec_objet_perdu.validiter ==0 %}
+                                    <span class="badge bg-danger" style="color: #FFFFFF">n'est pas validée</span>
+                                {% else %}
+                                    <span class="badge bg-success" style="color: #FFFFFF">Valider</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Categorie</th>
+                            <td>{{ rec_objet_perdu.categorie }}</td>
+                        </tr>
+                        {% if rec_objet_perdu.marque != null%}
+                            <tr>
+                                <th>Marque</th>
+                                <td>{{ rec_objet_perdu.marque }}</td>
+                            </tr>
+                        {% endif %}
+                        <tr>
+                            <th>Dateperte</th>
+                            <td>{{ rec_objet_perdu.dateperte ? rec_objet_perdu.dateperte|date('Y-m-d H:i:s') : '' }}</td>
+                        </tr>
+                        {% if rec_objet_perdu.modele != null%}
+                            <tr>
+                                <th>Modele</th>
+                                <td>{{ rec_objet_perdu.modele }}</td>
+                            </tr>
+                        {% endif %}
+                        {% if rec_objet_perdu.couleur != null%}
+                            <tr>
+                                <th>Couleur</th>
+                                <td>{{ rec_objet_perdu.couleur }}</td>
+                            </tr>
+                        {% endif %}
+                        {% if rec_objet_perdu.numSerie != null%}
+                            <tr>
+                                <th>NumSerie</th>
+                                <td>{{ rec_objet_perdu.numSerie }}</td>
+                            </tr>
+                        {% endif %}
+
+                        </tbody>
+                    </table>
+                    <div class="social-list text-center">
+                        <a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" data-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <img src="{{ asset('front/images/contact-image.jpg') }}" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary btn-icon-split" href="{{ path('home_admin') }}">Retourner</a>
+{% endblock %}

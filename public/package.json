@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bootstrap-datepicker": "^1.9.0",
+    "bootstrap-datetimepicker": "0.0.7",
     "jquery": "^3.5.1",
-    "select2": "^4.0.13"
+    "select2": "^4.0.13",
+    "v3": "0.0.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -25,21 +25,33 @@ class RecObjetPerduController extends AbstractController
             'rec_objet_perdus' => $recObjetPerduRepository->findAll(),
         ]);
     }
+    /**
+     * @Route("/admin/index", name="rec_objet_perdu_admin_index", methods={"GET"})
+     */
+    public function indexAdmin(RecObjetPerduRepository $recObjetPerduRepository): Response
+    {
+        return $this->render('Back/RecObjet/index.html.twig', [
+            'rec_objet_perdus' => $recObjetPerduRepository->findAll(),
+        ]);
+    }
 
     /**
      * @Route("/new", name="rec_objet_perdu_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
+
         $recObjetPerdu = new RecObjetPerdu();
         $form = $this->createForm(RecObjetPerduType::class, $recObjetPerdu);
         $form->remove('etat');
         $form->remove('validiter');
+        $form->remove('user');
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
             $mediaInfos = $form->get('Media')->getData();
+
             foreach( $mediaInfos  as $media) {
                 $imageName = $media->getClientOriginalName();
                 $newImageName = md5(uniqid()) . $imageName;
@@ -70,14 +82,25 @@ class RecObjetPerduController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="rec_objet_perdu_show", methods={"GET"})
+     * @Route("/admin/detail/{id}", name="rec_objet_perdu_admin_show")
      */
-    public function show(RecObjetPerdu $recObjetPerdu): Response
+    public function show($id)
+
     {
-        return $this->render('front/rec_objet_perdu/show.html.twig', [
-            'rec_objet_perdu' => $recObjetPerdu,
-        ]);
+        $repository = $this->getDoctrine()->getRepository(RecObjetPerdu::class);
+        $RecObjetPerdu = $repository->find($id);
+        if ($RecObjetPerdu) {
+            return $this->render('Back/RecObjet/show.html.twig', [
+                'rec_objet_perdu' => $RecObjetPerdu,
+            ]);
+        }else{
+            $this->addFlash('error', 'Réclamation innexistante');
+            return $this->redirectToRoute('rec_objet_perdu_admin_index');
+        }
     }
+
+
+
 
     /**
      * @Route("/{id}/edit", name="rec_objet_perdu_edit", methods={"GET","POST"})
@@ -99,17 +122,5 @@ class RecObjetPerduController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="rec_objet_perdu_delete", methods={"DELETE"})
-     */
-    public function delete(Request $request, RecObjetPerdu $recObjetPerdu): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$recObjetPerdu->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($recObjetPerdu);
-            $entityManager->flush();
-        }
 
-        return $this->redirectToRoute('Home');
-    }
 }

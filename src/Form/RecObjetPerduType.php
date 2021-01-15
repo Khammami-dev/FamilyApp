@@ -21,7 +21,7 @@ class RecObjetPerduType extends AbstractType
                 'label' => 'Titre*',
                 'required' => True,
             ])
-            ->add('date')
+            ->add('date',null)
             ->add('localisation')
             ->add('adresse',TextType::class,[
                 'label' => 'Adresse Manuelle*',
@@ -81,6 +81,7 @@ class RecObjetPerduType extends AbstractType
                     )
                 ]
             )
+            ->getForm();
         ;
 
     }
