@@ -6,6 +6,7 @@ use App\Entity\Medias;
 use App\Entity\RecObjetPerdu;
 use App\Form\RecObjetPerduType;
 use App\Repository\RecObjetPerduRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,19 +27,23 @@ class RecObjetPerduController extends AbstractController
         ]);
     }
     /**
-     * @Route("/admin/index/{page?1}", name="rec_objet_perdu_admin_index", methods={"GET"})
+     * @Route("/admin/index/", name="rec_objet_perdu_admin_index", methods={"GET"})
      */
-    public function indexAdmin(RecObjetPerduRepository $recObjetPerduRepository, $page): Response
+    public function indexAdmin(RecObjetPerduRepository $recObjetPerduRepository,Request $request, PaginatorInterface $paginator): Response
     {
-        $recObjetPerdu = $recObjetPerduRepository->findAll(
-             [],
-             [],
-             3,
-             ($page - 1) * 3
-
+        $donnees = $recObjetPerduRepository->findBy(
+            [],
+            ['date'=>'desc']);
+        $recObjetPerdu = $paginator->paginate(
+            $donnees, // Requête contenant les données à paginer (ici nos articles)
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            3 // Nombre de résultats par page
         );
+
         return $this->render('Back/RecObjet/index.html.twig', [
-            'rec_objet_perdus' => $recObjetPerdu
+            'rec_objet_perdus' => $recObjetPerdu,
+
+
         ]);
     }
 

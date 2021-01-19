@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Help.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Help.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RecObjetPerduController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecObjetPerduController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back/Layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/Layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back/RecObjet/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/RecObjet/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Back/RecObjet/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/RecObjet/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +143,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
       <path value="$PROJECT_DIR$/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jVIN2EEuu69aDVorea0NP4lS6C" />
@@ -207,7 +214,7 @@
       <workItem from="1610646173497" duration="31954000" />
       <workItem from="1610973397586" duration="9176000" />
       <workItem from="1611057027206" duration="319000" />
-      <workItem from="1611062553143" duration="837000" />
+      <workItem from="1611062553143" duration="9454000" />
     </task>
     <servers />
   </component>
