@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/Back/RecObjet/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RecObjetPerduController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecObjetPerduController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back/RecObjet/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/RecObjet/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Back/Layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/Layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Back/RecObjet/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/RecObjet/edit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +204,10 @@
       <workItem from="1609168789604" duration="1952000" />
       <workItem from="1610023603056" duration="714000" />
       <workItem from="1610100196136" duration="5792000" />
-      <workItem from="1610646173497" duration="31629000" />
+      <workItem from="1610646173497" duration="31954000" />
+      <workItem from="1610973397586" duration="9176000" />
+      <workItem from="1611057027206" duration="319000" />
+      <workItem from="1611062553143" duration="837000" />
     </task>
     <servers />
   </component>
@@ -224,10 +227,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607684953988" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610747291628">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610976624218">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610747291628" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610976624218" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1610103630978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -236,5 +239,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="106" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1607676311690" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1610978721418">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610978721418" />
   </component>
 </project>

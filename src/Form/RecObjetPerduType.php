@@ -31,8 +31,12 @@ class RecObjetPerduType extends AbstractType
                     'placeholder' => '8,Rue el borhaine,Mourouj5,Ben Arous'
                 )
             ])
-            ->add('etat')
-            ->add('validiter')
+            ->add('etat',CheckboxType::class,[
+                'label_attr' => ['class' => 'switch-custom'],
+            ])
+            ->add('validiter',CheckboxType::class,[
+                        'label_attr' => ['class' => 'switch-custom'],
+                       ])
             ->add('categorie',ChoiceType::class,[
                         'choices'  => [
                     'SmartPhone'=>'SmartPhone',

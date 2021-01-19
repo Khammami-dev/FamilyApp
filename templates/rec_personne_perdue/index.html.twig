@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RecPersonnePerdue index{% endblock %}
+
+{% block body %}
+    <h1>RecPersonnePerdue index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Date</th>
+                <th>Localisation</th>
+                <th>Adresse</th>
+                <th>Description</th>
+                <th>Etat</th>
+                <th>Publique</th>
+                <th>Validiter</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>NumCin</th>
+                <th>Age</th>
+                <th>DatePerte</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rec_personne_perdue in rec_personne_perdues %}
+            <tr>
+                <td>{{ rec_personne_perdue.id }}</td>
+                <td>{{ rec_personne_perdue.titre }}</td>
+                <td>{{ rec_personne_perdue.date ? rec_personne_perdue.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ rec_personne_perdue.localisation }}</td>
+                <td>{{ rec_personne_perdue.adresse }}</td>
+                <td>{{ rec_personne_perdue.description }}</td>
+                <td>{{ rec_personne_perdue.etat ? 'Yes' : 'No' }}</td>
+                <td>{{ rec_personne_perdue.publique ? 'Yes' : 'No' }}</td>
+                <td>{{ rec_personne_perdue.validiter ? 'Yes' : 'No' }}</td>
+                <td>{{ rec_personne_perdue.nom }}</td>
+                <td>{{ rec_personne_perdue.prenom }}</td>
+                <td>{{ rec_personne_perdue.numCin }}</td>
+                <td>{{ rec_personne_perdue.age }}</td>
+                <td>{{ rec_personne_perdue.datePerte ? rec_personne_perdue.datePerte|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('rec_personne_perdue_show', {'id': rec_personne_perdue.id}) }}">show</a>
+                    <a href="{{ path('rec_personne_perdue_edit', {'id': rec_personne_perdue.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="15">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('rec_personne_perdue_new') }}">Create new</a>
+{% endblock %}

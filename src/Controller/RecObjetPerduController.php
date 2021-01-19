@@ -26,12 +26,19 @@ class RecObjetPerduController extends AbstractController
         ]);
     }
     /**
-     * @Route("/admin/index", name="rec_objet_perdu_admin_index", methods={"GET"})
+     * @Route("/admin/index/{page?1}", name="rec_objet_perdu_admin_index", methods={"GET"})
      */
-    public function indexAdmin(RecObjetPerduRepository $recObjetPerduRepository): Response
+    public function indexAdmin(RecObjetPerduRepository $recObjetPerduRepository, $page): Response
     {
+        $recObjetPerdu = $recObjetPerduRepository->findAll(
+             [],
+             [],
+             3,
+             ($page - 1) * 3
+
+        );
         return $this->render('Back/RecObjet/index.html.twig', [
-            'rec_objet_perdus' => $recObjetPerduRepository->findAll(),
+            'rec_objet_perdus' => $recObjetPerdu
         ]);
     }
 
@@ -113,36 +120,44 @@ class RecObjetPerduController extends AbstractController
 
 
     /**
-     * @Route("/admin/{id}/edit", name="rec_objet_perdu_edit", methods={"GET","POST"})
+     * @Route("/admin/{id}/edit", name="rec_objet_perdu_edit")
      */
-    public function edit(Request $request, RecObjetPerdu $recObjetPerdu,$id): Response
+    public function edit(Request $request, RecObjetPerdu $recObjetPerdu): Response
     {
-        $repository = $this->getDoctrine()->getRepository(RecObjetPerdu::class);
-        $RecObjetPerdu = $repository->find($id);
-        if (!$RecObjetPerdu) {
-            $this->addFlash('error', 'Réclamation inexistante innexistante');
+        if (!$recObjetPerdu) {
+            $this->addFlash('error', 'Réclamation  innexistante');
             return $this->redirectToRoute('rec_objet_perdu_admin_index');
-        } else {
+        }
+        $form = $this->createForm(RecObjetPerduType::class, $recObjetPerdu);
+        $form->remove('date');
+        $form->remove('localisation');
+        $form->remove('adresse');
+        $form->remove('categorie');
+        $form->remove('marque');
+        $form->remove('dateperte');
+        $form->remove('commisariatPolice');
+        $form->remove('user');
+        $form->remove('Media');
+        $form->remove('description');
+        $form->remove('publique');
+        $form->remove('titre');
+        $form->remove('couleur');
+        $form->remove('modele');
+        $form->remove('numSerie');
 
-            $form = $this->createForm(RecObjetPerduType::class, $recObjetPerdu);
-            $form->handleRequest($request);
 
+        $form->handleRequest($request);
 
-            if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
 
-
-                $doctrine = $this->getDoctrine();
-                $manager = $doctrine->getManager();
-                $manager->persist($RecObjetPerdu);
-
-                return $this->redirectToRoute('rec_objet_perdu_admin_index');
-            }
-
-            return $this->render('Back/RecObjet/edit.html.twig', [
-                'rec_objet_perdu' => $recObjetPerdu,
-                'form' => $form->createView(),
-            ]);
+            return $this->redirectToRoute('rec_objet_perdu_admin_index');
         }
 
+        return $this->render('Back/RecObjet/edit.html.twig', [
+            'rec_objet_perdu' => $recObjetPerdu,
+            'form' => $form->createView(),
+        ]);
     }
+
 }

@@ -4,11 +4,12 @@
 
     {% endblock %}
 
+    <h1>Modifier Réclamation objet perdu </h1>
 
-    {{ form_row(form.etat) }}
-    {{ form_row(form.validiter) }}
+    {{ include('Back/RecObjet/_form.html.twig', {'button_label': 'Modifier'}) }}
 
 
-    <button class="btn">{{ button_label|default('Save') }}</button>
+
+
 
 {% endblock %}

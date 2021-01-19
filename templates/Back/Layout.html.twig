@@ -26,6 +26,21 @@
 
 <!-- Page Wrapper -->
 <div id="wrapper">
+    {% for message in app.session.flashBag.get('error') %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.session.flashBag.get('info') %}
+        <div class="alert alert-info">
+            {{ message }}
+        </div>
+    {% endfor %}
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -267,7 +282,8 @@
 
 <!-- Page level custom scripts -->
 <script src="{{ asset('backend/js/demo/chart-area-demo.js')}}"></script>
-<script src="{{ asset('js/demo/chart-pie-demo.js')}}"></script>
+<script src="{{ asset('backend/js/demo/chart-pie-demo.js')}}"></script>
+
 
 </body>
 
