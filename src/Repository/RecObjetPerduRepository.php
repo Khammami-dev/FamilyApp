@@ -18,6 +18,17 @@ class RecObjetPerduRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, RecObjetPerdu::class);
     }
+    public function getNb() {
+
+        return $this->createQueryBuilder('l')
+
+            ->select('COUNT(l)')
+
+            ->getQuery()
+
+            ->getSingleScalarResult();
+
+    }
 
     // /**
     //  * @return RecObjetPerdu[] Returns an array of RecObjetPerdu objects
@@ -47,5 +58,6 @@ class RecObjetPerduRepository extends ServiceEntityRepository
         ;
     }
     */
+
     
 }

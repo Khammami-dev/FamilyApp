@@ -27,21 +27,25 @@ class RecObjetPerduController extends AbstractController
         ]);
     }
     /**
-     * @Route("/admin/index/", name="rec_objet_perdu_admin_index", methods={"GET"})
+     * @Route("/admin/index/{page?1}", name="rec_objet_perdu_admin_index", methods={"GET"})
      */
-    public function indexAdmin(RecObjetPerduRepository $recObjetPerduRepository,Request $request, PaginatorInterface $paginator): Response
+    public function indexAdmin($page): Response
     {
-        $donnees = $recObjetPerduRepository->findBy(
-            [],
-            ['date'=>'desc']);
-        $recObjetPerdu = $paginator->paginate(
-            $donnees, // Requête contenant les données à paginer (ici nos articles)
-            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
-            3 // Nombre de résultats par page
-        );
 
+        $repository = $this->getDoctrine()->getRepository(RecObjetPerdu::class);
+        $nb = $repository->getNb();
+        $pages=($nb  % 3)+1;
+
+
+        $recObjetPerdu = $repository->findBy(
+            [],
+            ['date'=>'desc'],
+            3,               /*1 2 3 4 5 */
+            ($page - 1) * 3 /*0 3 6 9 12 */
+        );
         return $this->render('Back/RecObjet/index.html.twig', [
             'rec_objet_perdus' => $recObjetPerdu,
+            'pages' => $pages
 
 
         ]);

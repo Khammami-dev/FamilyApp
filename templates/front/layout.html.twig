@@ -80,7 +80,7 @@
     </div>
     <!-- HEADER-TOP-AREA-END -->
     <!-- MAINMENU-AREA-START -->
-    <div class="mainmenu-area">
+    <div class="mainmenu-area" style="background-color: black;">
         <div class="container">
             <div class="row">
                 <div class="mainmenu">
@@ -103,11 +103,9 @@
                                 </ul>
                             </div>
                         </nav>
-                        <div id="sb-search" class="sb-search search-box">
-                            <form>
-                                <input class="sb-search-input" placeholder="Search..." type="text" value="" name="search" id="search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
+
+                        <div id="sb-search" class="sb-search search-box" style="background-color: #00bb00;">
+                            <button type="button" class="btn btn-success">Connexion</button>
                         </div>
                     </div>
                 </div>
@@ -121,7 +119,7 @@
             <div class="header-single-text">
                 <div class="header-bg header-bg-1"></div>
                 <h1>welcome to police <br />international</h1>
-                <a href="#" class="btn default-button blue-btn" title="inscription">Inscription</a>
+                <a href="{{ path('user_new') }}" class="btn default-button blue-btn" title="inscription">Inscription</a>
                 <a href="contact.html" class="btn default-button red-btn" title="Contact us">Alerte d'urgence</a>
             </div>
             <div class="header-single-text">

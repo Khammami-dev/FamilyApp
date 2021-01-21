@@ -3,9 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -24,6 +23,26 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $nom;
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $prenom;
+    /**
+     * @ORM\Column(type="integer", length=180)
+     */
+    private $numcin;
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $telephone;
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $adresse;
 
     /**
      * @ORM\Column(type="json")
@@ -36,21 +55,7 @@ class User implements UserInterface
      */
     private $password;
 
-    /**
-     * @ORM\OneToMany(targetEntity=RecObjetPerdu::class, mappedBy="user", orphanRemoval=true)
-     */
-    private $recObjetPerdus;
 
-    /**
-     * @ORM\OneToMany(targetEntity=RecPersonnePerdue::class, mappedBy="user", orphanRemoval=true)
-     */
-    private $recPersonnePerdues;
-
-    public function __construct()
-    {
-        $this->recObjetPerdus = new ArrayCollection();
-        $this->recPersonnePerdues = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -68,6 +73,62 @@ class User implements UserInterface
 
         return $this;
     }
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(string $nom): self
+    {
+        $this-> nom =  $nom;
+
+        return $this;
+    }
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this-> prenom =  $prenom;
+
+        return $this;
+    }
+    public function getNumcin(): ?int
+    {
+        return $this->numcin;
+    }
+
+    public function setNumcin(int $numcin): self
+    {
+        $this-> numcin =  $numcin;
+
+        return $this;
+    }
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this-> adresse =  $adresse;
+
+        return $this;
+    }
+    public function getTelephone(): ?String
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(string $telephone): self
+    {
+        $this-> telephone =  $telephone;
+
+        return $this;
+    }
+
 
     /**
      * A visual identifier that represents this user.
@@ -98,6 +159,7 @@ class User implements UserInterface
         return $this;
     }
 
+
     /**
      * @see UserInterface
      */
@@ -112,6 +174,8 @@ class User implements UserInterface
 
         return $this;
     }
+
+
 
     /**
      * @see UserInterface
@@ -128,65 +192,5 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
-    }
-
-    /**
-     * @return Collection|RecObjetPerdu[]
-     */
-    public function getRecObjetPerdus(): Collection
-    {
-        return $this->recObjetPerdus;
-    }
-
-    public function addRecObjetPerdu(RecObjetPerdu $recObjetPerdu): self
-    {
-        if (!$this->recObjetPerdus->contains($recObjetPerdu)) {
-            $this->recObjetPerdus[] = $recObjetPerdu;
-            $recObjetPerdu->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeRecObjetPerdu(RecObjetPerdu $recObjetPerdu): self
-    {
-        if ($this->recObjetPerdus->removeElement($recObjetPerdu)) {
-            // set the owning side to null (unless already changed)
-            if ($recObjetPerdu->getUser() === $this) {
-                $recObjetPerdu->setUser(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|RecPersonnePerdue[]
-     */
-    public function getRecPersonnePerdues(): Collection
-    {
-        return $this->recPersonnePerdues;
-    }
-
-    public function addRecPersonnePerdue(RecPersonnePerdue $recPersonnePerdue): self
-    {
-        if (!$this->recPersonnePerdues->contains($recPersonnePerdue)) {
-            $this->recPersonnePerdues[] = $recPersonnePerdue;
-            $recPersonnePerdue->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeRecPersonnePerdue(RecPersonnePerdue $recPersonnePerdue): self
-    {
-        if ($this->recPersonnePerdues->removeElement($recPersonnePerdue)) {
-            // set the owning side to null (unless already changed)
-            if ($recPersonnePerdue->getUser() === $this) {
-                $recPersonnePerdue->setUser(null);
-            }
-        }
-
-        return $this;
     }
 }
