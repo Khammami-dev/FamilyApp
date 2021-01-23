@@ -8,30 +8,24 @@
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <div class="page-title">
-                        <h2>About us</h2>
+                        <h2>Help.tn</h2>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4">
                     <div class="about-image-slide">
-                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
-                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
-                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
-                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
-                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
-                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
-                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
-                        <img src="{{ asset('front/images/about-image.jpg') }}" alt="">
+                        <img src="{{ asset('front/images/about-image1.jpg') }}" alt="" style="width: 370px; height: 450px;">
+                        <img src="{{ asset('front/images/about-image2.jpg') }}" alt="" style="width: 370px; height: 450px;">
+                        <img src="{{ asset('front/images/about-image3.jpg') }}" alt="" style="width: 370px; height: 450px;">
+
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-8">
                     <div class="about-text">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue imperdiet quam, ac rutrum dui porta at. Morbi posuere mi vitae ultricies tempor. Praesent eget urna a magna ornare bibendum a id ligula. Nullam fermen ipsum imperdiet laoreet pretium. Donec quis leo augue. </p>
-                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultric posuere cubilia Curae; Integer ac elit et elit malesuada int eget nec est. Pellentesque euismod dui purus, ac consequat nisl volutpat eu.</p>
+                        <p> Help.tn est une application web qui se compose de deux parties :
+                            <br>
+                            une partie front ciblée aux citoyens tunisiens pour faire des réclamations ou bien des demandes d’aide en urgence auprès des commissariats de police, et une partie Backend destinée à ces derniers.
+                        </p>
 
-                        <p>In nec semper nibh, in placerat ipsum. Nullam tempus gravida mi, et pellentesque arcu finibus id. Vivamus ut nibh vel le convallis lacinia id a nisi. Cras sit amet aliquam mi.</p>
-
-                        <p>Fusce a fermentum velit. Vestibulum porttitor justo eget orci faucibus, sed ornare ligula volutpat. Phasellus in lectus el, mollis ante sed, pharetra nibh. Mauris iaculis ex vel iaculis tempor.</p>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                     </div>
                 </div>
             </div>
@@ -39,7 +33,7 @@
     </section>
     <!-- ABOUT-AREA-END -->
     <!-- start Personnes perdus -->
-    <section class="blog-area blue-bg section-padding" style="background-color: black;">
+    <section class="blog-area blue-bg section-padding" style="background-color: #384884;">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
@@ -51,17 +45,17 @@
                    <div class="col-xs-12 col-sm-4">
                     <div class="sinlge-blog">
 
-                            {% for a in RecObjetPerdu.medias %}
+
                         <div class="blog-thumb">
 
-                            <img width="150px" height="150px" {% if ('http' in a.path) %}
-                                        src="{{ a.path }}"
+                            <img width="150px" height="150px" {% if ('http' in RecObjetPerdu.image) %}
+                                        src="{{ RecObjetPerdu.image }}"
                                     {% else %}
-                                        src="{{ asset(a.path) }}"
+                                        src="{{ asset(RecObjetPerdu.image) }}"
                                     {% endif %}
-                                    class="rounded-circle">
+                                    class="rounded-circle" style="width: 310px; height: 200px;">
                         </div>
-                            {% endfor %}
+
 
                         <a href="#" title="we call of thieves">
                             <h3>{{ RecObjetPerdu.titre }}</h3></a>

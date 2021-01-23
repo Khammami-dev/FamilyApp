@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Medias;
 use App\Entity\RecObjetPerdu;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -12,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Image;
 
 class RecObjetPerduType extends AbstractType
 {
@@ -70,7 +72,14 @@ class RecObjetPerduType extends AbstractType
                 'mapped' =>false,
                 'multiple' => true,
                 'required' => false,
+
+
             ])
+            ->add('image', FileType::class, [
+                'mapped' => false,
+                'required' => false,
+
+            ] )
             ->add('description',TextareaType::class,[
                 'label' => 'Description',
                     'attr' => array(

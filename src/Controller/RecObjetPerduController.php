@@ -6,11 +6,13 @@ use App\Entity\Medias;
 use App\Entity\RecObjetPerdu;
 use App\Form\RecObjetPerduType;
 use App\Repository\RecObjetPerduRepository;
+use App\Service\ImageUploaderService;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\services\Utils;
 
 /**
  * @Route("/rec/objet/perdu")
@@ -40,8 +42,8 @@ class RecObjetPerduController extends AbstractController
         $recObjetPerdu = $repository->findBy(
             [],
             ['date'=>'desc'],
-            3,               /*1 2 3 4 5 */
-            ($page - 1) * 3 /*0 3 6 9 12 */
+            3,
+            ($page - 1) * 3
         );
         return $this->render('Back/RecObjet/index.html.twig', [
             'rec_objet_perdus' => $recObjetPerdu,
@@ -54,7 +56,8 @@ class RecObjetPerduController extends AbstractController
     /**
      * @Route("/new", name="rec_objet_perdu_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request,
+     ImageUploaderService $imageUploaderService,$uploadRecObjetPerduDirectory): Response
     {
 
         $recObjetPerdu = new RecObjetPerdu();
@@ -62,27 +65,25 @@ class RecObjetPerduController extends AbstractController
         $form->remove('etat');
         $form->remove('validiter');
         $form->remove('user');
+        $form->remove('Medias');
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $mediaInfos = $form->get('Media')->getData();
+            $imageInfos = $form->get('image')->getData();
 
-            foreach( $mediaInfos  as $media) {
-                $imageName = $media->getClientOriginalName();
-                $newImageName = md5(uniqid()) . $imageName;
-                $media->move(
-                    $this->getParameter('RecObjetPerdu_directory'),
-                    $newImageName
-                );
+            if ($imageInfos) {
+                $newImageName = $imageUploaderService->uploadFile($imageInfos, $uploadRecObjetPerduDirectory);
+                $recObjetPerdu->setImage('uploads/RecObjetPerdu/'.$newImageName);
             }
-                $med=new Medias();
-                $med->setPath($newImageName);
-                $recObjetPerdu->addMedia($med);
+
+
+
                 $recObjetPerdu->setEtat(0);
                 $recObjetPerdu->setValiditer(1);
                 $recObjetPerdu->setDate(new \DateTime());
                 $recObjetPerdu->setUser(null);
+
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($recObjetPerdu);

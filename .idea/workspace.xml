@@ -2,25 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Service/ImageUploaderService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/scss/navs/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/scss/navs/_sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/about-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/slider/slide-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/images/slider/slide-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RecObjetPerduController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecObjetPerduController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UtlisateurFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecObjetPerduRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RecObjetPerduRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back/Layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/Layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back/RecObjet/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/RecObjet/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back/RecObjet/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/RecObjet/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RecObjetPerdu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RecObjetPerdu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecObjetPerduType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/layoutsec.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layoutsec.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/rec_perte_personne/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/rec_perte_personne/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/rec_perte_personne/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/rec_perte_personne/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/rec_perte_personne/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/rec_perte_personne/show.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +223,8 @@
       <workItem from="1611062553143" duration="9454000" />
       <workItem from="1611084381802" duration="15532000" />
       <workItem from="1611168790258" duration="12414000" />
-      <workItem from="1611233524586" duration="7850000" />
+      <workItem from="1611233524586" duration="23785000" />
+      <workItem from="1611427174918" duration="4793000" />
     </task>
     <servers />
   </component>
@@ -246,10 +244,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1611088290616" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611185074854">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611428892472">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1611185074854" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1611428892472" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1610103630978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

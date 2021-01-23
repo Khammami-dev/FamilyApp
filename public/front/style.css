@@ -277,7 +277,8 @@ input:-webkit-autofill:focus {
 
 .mainmenu ul.nav.navbar-nav li a:hover,
 .mainmenu ul.navbar-nav li.active a {
-    background-color: #db2727;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .mainmenu .navbar {

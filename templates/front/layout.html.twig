@@ -54,33 +54,10 @@
 <!-- HEADER-AREA-START-->
 <header class="header-area">
     <!-- HEADER-TOP-AREA-START -->
-    <div class="header-top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-xs-12 xs-center">
-                    <div class="logo">
-                        <a href="index.html" title="Police">
-                            <!-- LOGO-IMAGE -->
-                            <img src="{{ asset('front/images/logo.png') }}" alt="police">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-8 xs-none text-right">
-                    <div class="contact-info">
-                        <div class="phone">
-                            <a href="callto:+18002345678" title="+1 800 234 5678"><i class="fa fa-phone"></i>+1 800 234 5678</a>
-                        </div>
-                        <div class="email">
-                            <a href="mailto:info@police.com" title="info@police.com"><i class="fa fa-envelope"></i>info@police.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- HEADER-TOP-AREA-END -->
     <!-- MAINMENU-AREA-START -->
-    <div class="mainmenu-area" style="background-color: black;">
+    <div class="mainmenu-area" style="background-color: #384884;">
         <div class="container">
             <div class="row">
                 <div class="mainmenu">
@@ -96,7 +73,7 @@
                             </div>
                             <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="{{ path('home') }}" title="Home">HOME</a></li>
+                                    <li class="active" ><a href="{{ path('home') }}" title="Home">HOME</a></li>
                                     <li><a href="{{ path('rec_objet_perdu_new') }}" title="About Us">Réclamation objet perdus</a></li>
                                     <li><a href="service.html" title="Services">Réclamation Personnes perdues</a></li>
                                     <li><a href="gallery.html" title="Gallery">Réclamation Brackage</a></li>
@@ -118,20 +95,20 @@
         <div class="header-text-carousel text-center">
             <div class="header-single-text">
                 <div class="header-bg header-bg-1"></div>
-                <h1>welcome to police <br />international</h1>
+                <h1>Bienvenue dans <br />Help.tn</h1>
                 <a href="{{ path('user_new') }}" class="btn default-button blue-btn" title="inscription">Inscription</a>
                 <a href="contact.html" class="btn default-button red-btn" title="Contact us">Alerte d'urgence</a>
             </div>
             <div class="header-single-text">
                 <div class="header-bg header-bg-2"></div>
-                <h1>if you run you'll <br /> only die tired</h1>
-                <a href="#" class="btn default-button blue-btn" title="Read more">Inscription</a>
+                <h1>Envoyer Réclamations <br /> Aider les gens </h1>
+                <a href="{{ path('user_new') }}" class="btn default-button blue-btn" >Inscription</a>
                 <a href="contact.html" class="btn default-button red-btn" title="Contact us">Alerte d'urgence</a>
             </div>
             <div class="header-single-text">
                 <div class="header-bg header-bg-3"></div>
-                <h1>Welcome to our  <br /> Website</h1>
-                <a href="#" class="btn default-button blue-btn" title="Read more">Inscription</a>
+                <h1>Bienvenue dans <br /> Help.tn</h1>
+                <a href="{{ path('user_new') }}" class="btn default-button blue-btn" >Inscription</a>
                 <a href="contact.html" class="btn default-button red-btn" title="Contact us">Alerte d'urgence</a>
             </div>
         </div>

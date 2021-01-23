@@ -474,4 +474,8 @@
             color: fade-out($white, 0.5);
         }
     }
+    li.active a{
+        background-color: whitesmoke !important;
+        color: black !important;
+    }
 }
