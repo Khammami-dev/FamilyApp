@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <div class="page-title">
-                        <h2>{{ rec_objet_perdu.titre }}</h2>
+                        <h2>{{ rec_personne_perdue.titre }}</h2>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4">
@@ -15,62 +15,53 @@
                         <tbody>
                         <tr>
                             <th>Date</th>
-                            <td>{{ rec_objet_perdu.date ? rec_objet_perdu.date|date('Y-m-d H:i:s') : '' }}</td>
+                            <td>{{ rec_personne_perdue.date ? rec_personne_perdue.date|date('Y-m-d H:i:s') : '' }}</td>
                         </tr>
 
                         <tr>
                             <th>Localisation</th>
-                            <td>{{ rec_objet_perdu.localisation }}</td>
+                            <td>{{ rec_personne_perdue.localisation }}</td>
                         </tr>
                         <tr>
                             <th>Adresse</th>
-                            <td>{{ rec_objet_perdu.adresse }}</td>
+                            <td>{{ rec_personne_perdue.adresse }}</td>
                         </tr>
-                        {% if rec_objet_perdu.description != null%}
+                        {% if rec_personne_perdue.description != null%}
                             <tr>
                                 <th>Description</th>
-                                <td>{{ rec_objet_perdu.description }}</td>
+                                <td>{{ rec_personne_perdue.description }}</td>
                             </tr>
                         {%endif%}
                         <tr>
                             <th>Etat</th>
-                            <td>{% if rec_objet_perdu.etat ==0 %}
+                            <td>{% if rec_personne_perdue.etat ==0 %}
                                     <span class="badge bg-danger" style="color: #FFFFFF; background-color: red"> Pas encore trouvé </span>
                                 {% else %}
                                     <span class="badge bg-success" style="color: #FFFFFF"> trouvé </span>
                                 {% endif %}
                             </td>
                         </tr>
-                        <tr>
-                            <th>Categorie</th>
-                            <td>{{ rec_objet_perdu.categorie }}</td>
-                        </tr>
-                        {% if rec_objet_perdu.marque != null%}
-                            <tr>
-                                <th>Marque</th>
-                                <td>{{ rec_objet_perdu.marque }}</td>
-                            </tr>
-                        {% endif %}
+
                         <tr>
                             <th>Dateperte</th>
-                            <td>{{ rec_objet_perdu.dateperte ? rec_objet_perdu.dateperte|date('Y-m-d H:i:s') : '' }}</td>
+                            <td>{{ rec_personne_perdue.dateperte ? rec_personne_perdue.dateperte|date('Y-m-d H:i:s') : '' }}</td>
                         </tr>
-                        {% if rec_objet_perdu.modele != null%}
+                        {% if rec_personne_perdue.nom != null%}
                             <tr>
-                                <th>Modele</th>
-                                <td>{{ rec_objet_perdu.modele }}</td>
+                                <th>Nom</th>
+                                <td>{{ rec_personne_perdue.nom }}</td>
                             </tr>
                         {% endif %}
-                        {% if rec_objet_perdu.couleur != null%}
+                        {% if rec_personne_perdue.prenom != null%}
                             <tr>
                                 <th>Couleur</th>
-                                <td>{{ rec_objet_perdu.couleur }}</td>
+                                <td>{{ rec_personne_perdue.prenom }}</td>
                             </tr>
                         {% endif %}
-                        {% if rec_objet_perdu.numSerie != null%}
+                        {% if rec_personne_perdue.numcin != null%}
                             <tr>
                                 <th>NumSerie</th>
-                                <td>{{ rec_objet_perdu.numSerie }}</td>
+                                <td>{{ rec_personne_perdue.numcin}}</td>
                             </tr>
                         {% endif %}
                         </tbody>
@@ -82,22 +73,22 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <img width="150px" height="150px" {% if ('http' in rec_objet_perdu.image) %}
-                        src="{{ rec_objet_perdu.image }}"
+                    <img width="150px" height="150px" {% if ('http' in rec_personne_perdue.image) %}
+                        src="{{ rec_personne_perdue.image }}"
                     {% else %}
-                        src="{{ asset(rec_objet_perdu.image) }}"
+                        src="{{ asset(rec_personne_perdue.image) }}"
                     {% endif %}
                          class="rounded-circle" style="width:370px; height: 470px; ">
                 </div>
                 <div class="forumDivOuter" style=""><div id="forumDiv">
                         <textarea class="autoExpand forumPost form-control" rows="4" data-min-rows="4" placeholder="laissez un commentaire" STYLE="width: 65%;"></textarea><br>
                         <button class="btn btn-primary">commenter</button><span style="margin: 0 10px;" class="pull-right"><a href="#" data-toggle="popover" title="" data-html="true" data-content="<ul><li>When asking a question, provide as much detail as possible.  Posts of simply &quot;It doesn't work&quot; may be removed.  </li><li>Don't Spam</li><li>Be respectful</li></ul>" data-original-title=""></a></span><span style="margin: 0 10px;" class="pull-right"><a href="#" data-toggle="popover" title="" data-html="true" data-content="<ul><li><span class='forumKey'>`</span> - Surround code with backticks</li><li><span class='forumKey'>*</span> - Surround text with stars to italicize.</li><li><span class='forumKey'>></span><span class='forumKey'>></span> - A line starting with two greater than characters will be indented as a quote.</li><li>A blank line will separate paragraphs.</li></ul>" data-original-title=""></a></span></div></div>
-                </div>
-
-
             </div>
 
+
         </div>
+
+    </div>
 
 
     </div>

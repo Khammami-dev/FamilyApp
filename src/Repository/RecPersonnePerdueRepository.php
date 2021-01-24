@@ -47,4 +47,17 @@ class RecPersonnePerdueRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function getNb() {
+
+        return $this->createQueryBuilder('l')
+
+            ->select('COUNT(l)')
+
+            ->getQuery()
+
+            ->getSingleScalarResult();
+
+    }
+
 }

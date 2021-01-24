@@ -57,24 +57,10 @@
 <!-- HEADER-AREA-START-->
 <header class="header-area">
     <!-- HEADER-TOP-AREA-START -->
-    <div class="header-top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-xs-12 xs-center">
-                    <div class="logo">
-                        <a href="#">
-                            <!-- LOGO-IMAGE -->
-                            <img src="{{ asset('front/images/logo.png') }}" alt="police">
-                        </a>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
     <!-- HEADER-TOP-AREA-END -->
     <!-- MAINMENU-AREA-START -->
-    <div class="mainmenu-area" style="background-color: black;">
+    <div class="mainmenu-area" style="background-color: #384884;">
         <div class="container">
             <div class="row">
                 <div class="mainmenu">
@@ -90,21 +76,10 @@
                             </div>
                             <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="{{ path('home') }}" title="Home">HOME</a></li>
-                                    <li>
-                                        <div class="dropdown">
-                                            <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #0044cc; color:#FFFFFF ">
-                                                Réclamation des pertes
-                                            </div>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="{{ path('rec_objet_perdu_new') }}" style="color: black">Des objets perdus</a>
-                                                <a class="dropdown-item" href="#" style="color: black"> Des personnes perdus</a>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li><a href="service.html" title="Services">Réclamation Personnes perdues</a></li>
-                                    <li><a href="gallery.html" title="Gallery">Réclamation Brackage</a></li>
+                                    <li class="active" ><a href="{{ path('home') }}" title="Home">HOME</a></li>
+                                    <li><a href="{{ path('rec_objet_perdu_new') }}" title="About Us">Réclamation objet perdus</a></li>
+                                    <li><a href="{{ path('rec_personne_perdue_new') }}" title="Services">Réclamation Personnes perdues</a></li>
+                                    <li><a href="" title="Gallery">Réclamation Brackage</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -127,7 +102,7 @@
                 <div class="header-bg"></div>
                 <h2>
                     {% block titlePage %}
-
+                          Réclamation
                     {% endblock %}
                 </h2>
 

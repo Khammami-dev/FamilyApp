@@ -62,10 +62,11 @@ class RecObjetPerduController extends AbstractController
 
         $recObjetPerdu = new RecObjetPerdu();
         $form = $this->createForm(RecObjetPerduType::class, $recObjetPerdu);
+        $form->remove('date');
         $form->remove('etat');
         $form->remove('validiter');
         $form->remove('user');
-        $form->remove('Medias');
+        $form->remove('Media');
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -154,6 +155,7 @@ class RecObjetPerduController extends AbstractController
         $form->remove('couleur');
         $form->remove('modele');
         $form->remove('numSerie');
+        $form->remove('image');
 
 
         $form->handleRequest($request);

@@ -1,0 +1,45 @@
+{% extends 'front/layoutsec.html.twig' %}
+
+{% block body %}
+
+
+    <div class="service-area">
+        <div class="container">
+
+            <!-- SINGLE-SERVICE-START -->
+            <h3 style="position: center">Toute les Réclamations des personnes perdus</h3>
+            {% for rec_personne_perdue in rec_personne_perdues %}
+                <div class="row  padding-top">
+
+                    <div class="col-xs-12 col-sm-6" style="padding-bottom: 70px;">
+
+                        <div class="service-thumb">
+                            <img width="150px" height="150px" {% if ('http' in rec_personne_perdue.image) %}
+                                src="{{ rec_personne_perdue.image }}"
+                            {% else %}
+                                src="{{ asset(rec_personne_perdue.image) }}"
+                            {% endif %}
+                                 class="rounded-circle" style="width:570px; height: 340px; ">
+                            <h3 class="service-thumb-title">{{ rec_personne_perdue.titre }}</h3>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="service-details">
+                            <h4>Date publication:</h4>   <h5>{{ rec_personne_perdue.date ? rec_personne_perdue.date|date('Y-m-d H:i:s') : '' }}</h5>
+                            <h4>Date perte:</h4>   <h5>{{ rec_personne_perdue.dateperte ? rec_personne_perdue.dateperte|date('Y-m-d H:i:s') : '' }}</h5>
+                            <h4>Localisation:</h4>  <h5>{{ rec_personne_perdue.localisation }}</h5>
+                            <h5>{{ rec_personne_perdue.description }}</h5>
+
+
+
+                            <a href="{{ path('rec_personne_perdue_show', {id: rec_personne_perdue.id})  }}" class="blue-btn btn">Lire détail</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <!-- SINGLE-SERVICE-END -->
+
+        </div>
+    </div>
+{% endblock %}

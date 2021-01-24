@@ -1,33 +1,39 @@
 {% extends 'front/layoutsec.html.twig' %}
 
 {% block body %}
-    <h2>Toute les Réclamations des objets perdus</h2>
+
 
     <div class="service-area">
         <div class="container">
+
             <!-- SINGLE-SERVICE-START -->
+            <h3 style="position: center">Toute les Réclamations des objets perdus</h3>
             {% for rec_objet_perdu in rec_objet_perdus %}
             <div class="row  padding-top">
-                <div class="col-xs-12 col-sm-6">
-                    {% for a in rec_objet_perdu.media %}
+
+                <div class="col-xs-12 col-sm-6" style="padding-bottom: 70px;">
+
                     <div class="service-thumb">
-                        <img src="{{a.path }}" alt="">
-                        <h3 class="service-thumb-title">We make a very good security</h3>
+                        <img width="150px" height="150px" {% if ('http' in rec_objet_perdu.image) %}
+                            src="{{ rec_objet_perdu.image }}"
+                        {% else %}
+                            src="{{ asset(rec_objet_perdu.image) }}"
+                        {% endif %}
+                             class="rounded-circle" style="width:570px; height: 340px; ">
+                        <h3 class="service-thumb-title">{{ rec_objet_perdu.titre }}</h3>
                     </div>
-                    {% endfor %}
+
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <div class="service-details">
-                        <p>
+                     <h4>Date publication:</h4>   <h5>{{ rec_objet_perdu.date ? rec_objet_perdu.date|date('Y-m-d H:i:s') : '' }}</h5>
+                        <h4>Date perte:</h4>   <h5>{{ rec_objet_perdu.dateperte ? rec_objet_perdu.dateperte|date('Y-m-d H:i:s') : '' }}</h5>
+                        <h4>Localisation:</h4>  <h5>{{ rec_objet_perdu.localisation }}</h5>
+                        <h5>{{ rec_objet_perdu.description }}</h5>
 
-                                    {{ rec_objet_perdu.titre }}
-                                   {{ rec_objet_perdu.date ? rec_objet_perdu.date|date('Y-m-d H:i:s') : '' }}
-                                    {{ rec_objet_perdu.localisation }}
-                                    {{ rec_objet_perdu.description }}
-                                    {{ rec_objet_perdu.dateperte ? rec_objet_perdu.dateperte|date('Y-m-d H:i:s') : '' }}
-                        </p>
 
-                        <a href="#" class="blue-btn btn">Read more</a>
+
+                        <a href="{{ path('rec_objet_perdu_show', {id: rec_objet_perdu.id})  }}" class="blue-btn btn">Lire détail</a>
                     </div>
                 </div>
             </div>

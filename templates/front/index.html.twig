@@ -100,85 +100,65 @@
     </section>
     <!-- end espace -->
 
-    <section class="blog-area blue-bg section-padding" style="background-color: black;">
+    <!-- start Personnes perdus -->
+    <section class="blog-area blue-bg section-padding" style="background-color: #384884;">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <div class="page-title">
-                        <h2>Réclamation des objets perdues</h2>
+                        <h2>Réclamation des personnes perdues</h2>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="sinlge-blog">
-                        <div class="blog-thumb">
-                            <a href="#"><img src="{{ asset('front/images/blog/01_blog.jpg') }}" alt="police"></a>
-                        </div>
-                        <a href="#" title="we call of thieves">
-                            <h3>we call of thieves</h3></a>
-                        <p>Quisque ipsum magna, finibus eu hendrerit in, pellentesque ut velit. Nam tempus ultrices pulvinar lacus...<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
-                        <div class="meta-content">
-                            <div class="meta-date inline">
-                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
+                {% for RecPersonnePerdu in RecPersonnePerdus %}
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="sinlge-blog">
+
+
+                            <div class="blog-thumb">
+
+                                <img width="150px" height="150px" {% if ('http' in RecPersonnePerdu.image) %}
+                                    src="{{ RecPersonnePerdu.image }}"
+                                {% else %}
+                                    src="{{ asset(RecPersonnePerdu.image) }}"
+                                {% endif %}
+                                     class="rounded-circle" style="width: 310px; height: 200px;">
                             </div>
-                            <div class="meta-tag alignright">
-                                <span><i class="fa fa-eye"></i>154</span>
-                                <span><i class="fa fa-heart"></i>19</span>
-                                <span><i class="fa fa-comments"></i>35</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="sinlge-blog">
-                        <div class="blog-video">
-                            <div class="video-item embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5e7KKDN4VqA"></iframe>
-                            </div>
-                        </div>
-                        <a href="#" title="we are meetings">
-                            <h3>we are meetings</h3></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nisi quas, ratione. Velit omnis mollitia accusamus illo repellat vitae quaerat!<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
-                        <div class="meta-content">
-                            <div class="meta-date inline">
-                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
-                            </div>
-                            <div class="meta-tag alignright">
-                                <span><i class="fa fa-eye"></i>154</span>
-                                <span><i class="fa fa-heart"></i>19</span>
-                                <span><i class="fa fa-comments"></i>35</span>
+
+
+                            <a href="#" title="we call of thieves">
+                                <h3>{{ RecPersonnePerdu.titre }}</h3></a>
+                            <p> {{RecPersonnePerdu.description }}<a href="{{ path('rec_personne_perdue_show', {id: RecPersonnePerdu.id})  }}" class="btn">Voir détails <i class="fa fa-angle-double-right "></i></a></p>
+                            <div class="meta-content">
+                                <div class="meta-date inline">
+                                    <p><i class="fa fa-clock-o"></i>Date de publication: {{ RecPersonnePerdu.date|date('Y-m-d') }} </p>
+                                    <p><i class="fa fa-clock-o"></i>Date de perte: {{ RecPersonnePerdu.dateperte|date('Y-m-d') }} </p>
+                                </div>
+                                <div class="meta-tag alignright">
+                                    <span><i class="fa fa-eye"></i>154</span>
+                                    <span><i class="fa fa-heart"></i>19</span>
+                                    <span><i class="fa fa-comments"></i>35</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="sinlge-blog">
-                        <div class="blog-thumb">
-                            <a href="#"><img src="{{ asset('front/images/blog/03_blog.jpg') }}" alt="police"></a>
-                        </div>
-                        <a href="#" title="is eating some"><h3>is eating some</h3></a>
-                        <p>Quisque ipsum magna, finibus eu hendrerit in, pellentesque ut velit. Nam tempus ultrices pulvinar lacus...<a href="#" class="btn">Read more <i class="fa fa-angle-double-right "></i></a></p>
-                        <div class="meta-content">
-                            <div class="meta-date inline">
-                                <p><i class="fa fa-clock-o"></i>24-07-2016</p>
-                            </div>
-                            <div class="meta-tag alignright">
-                                <span><i class="fa fa-eye"></i>154</span>
-                                <span><i class="fa fa-heart"></i>19</span>
-                                <span><i class="fa fa-comments"></i>35</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+
+
             </div>
         </div>
     </section>
 
+    <!-- End Personne perdus-->
 
+
+
+
+    <!-- start espace -->
     <section class="client-area section-padding">
         <div class="container">
             <div class="center-block">
                 <div class="about-text-center">
-                    <a href="{{ path('rec_objet_perdu_index') }}" class="btn default-button blue-btn">
+                    <a href="{{ path('rec_personne_perdue_index') }}" class="btn default-button blue-btn">
                         Lire autres
                         <span><i class="fa fa-angle-right"></i></span>
                     </a>
@@ -186,8 +166,9 @@
             </div>
         </div>
     </section>
+    <!-- end espace -->
 
-    <section class="blog-area blue-bg section-padding" style="background-color: black;">
+    <section class="blog-area blue-bg section-padding" style="background-color: #384884;">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
@@ -272,35 +253,8 @@
         </div>
     </section>
 
-    <!-- NEWSLATTER-AREA-START -->
-    <section class="newslatter-area section-padding text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <div class="page-title">
-                        <h2>Newslatter</h2>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                    <div class="newslatter">
-                        <div class="newslatter-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet dapibus felis sit amet consequat. Nulla nec sodales nibh. Phasellus vehicula ante sed dictum varius. Sed ullamcorper augue.</p>
-                        </div>
-                        <!-- SUBSCRIBE-FORM-START -->
-                        <div class="subscribe-form">
 
 
-                            <form action="#">
-                                <input type="email" placeholder="Your Email Here...">
-                                <input type="submit" value="Submit Now" title="Submit Now">
-                            </form>
-                        </div>
-                        <!-- SUBSCRIBE-FORM-START -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- NEWSLATTER-AREA-END -->
+
     <!-- FOOTER-AREA-START -->
 {% endblock %}

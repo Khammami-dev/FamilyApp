@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit RecObjetPerdu{% endblock %}
+
+{% block body %}
+    <h1>Edit RecObjetPerdu</h1>
+
+    {{ include('rec_objet_perdu/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('rec_objet_perdu_index') }}">back to list</a>
+
+    {{ include('rec_objet_perdu/_delete_form.html.twig') }}
+{% endblock %}

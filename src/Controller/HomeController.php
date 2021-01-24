@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\RecObjetPerdu;
+use App\Entity\RecPersonnePerdue;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -19,6 +20,12 @@ class HomeController extends AbstractController
             ['date'=>'desc'],
             3
         );
+        $repository2=$this->getDoctrine()->getRepository(RecPersonnePerdue::class);
+        $RecPersonnePerdus= $repository2->findBy(
+            ['publique' => 1],
+            ['date'=>'desc'],
+            3
+        );
 
 
 
@@ -27,7 +34,8 @@ class HomeController extends AbstractController
 
         return $this->render('front/index.html.twig', [
             'controller_name' => 'HomeController',
-            'RecObjetPerdus' => $RecObjetPerdus
+            'RecObjetPerdus' => $RecObjetPerdus,
+            'RecPersonnePerdus' => $RecPersonnePerdus
 
         ]);
     }
