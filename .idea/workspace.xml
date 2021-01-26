@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31168ea8-43d0-4b90-86ef-ed30507cdc8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/LoginStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/loginFront.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RecObjetPerduController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecObjetPerduController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RecPersonnePerdueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecPersonnePerdueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/RecPersonnePerdue.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RecPersonnePerdue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecPersonnePerdueType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecPersonnePerdueType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecPersonnePerdueRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RecPersonnePerdueRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back/Layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/Layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back/RecObjet/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back/RecObjet/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/layoutsec.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/layoutsec.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/rec_objet_perdu/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/rec_objet_perdu/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/rec_objet_perdu/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/rec_objet_perdu/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_personne_perdue/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_personne_perdue/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_personne_perdue/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_personne_perdue/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_personne_perdue/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rec_personne_perdue/show.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +216,8 @@
       <workItem from="1611084381802" duration="15532000" />
       <workItem from="1611168790258" duration="12414000" />
       <workItem from="1611233524586" duration="23785000" />
-      <workItem from="1611427174918" duration="21576000" />
+      <workItem from="1611427174918" duration="22242000" />
+      <workItem from="1611663396357" duration="18374000" />
     </task>
     <servers />
   </component>

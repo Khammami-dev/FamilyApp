@@ -35,29 +35,38 @@ class UserController extends AbstractController
     /**
      * @Route("/new", name="user_new", methods={"GET","POST"})
      */
-    public function new(Request $request, UserPasswordEncoderInterface $encoder): Response
+    public function new(Request $request, UserPasswordEncoderInterface $encoder,LoginAuthenticator $authenticator, GuardAuthenticatorHandler $guardHandler): Response
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->remove('roles');
-        $user->setRoles(array('ROLE_USER'));
+
+
         $form->handleRequest($request);
-        $plainPassword = 'ryanpass';
-        $encoded = $encoder->encodePassword($user, $plainPassword);
-        $user->setPassword($encoded);
+
+
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $plainPassword = $form->get('password')->getData();
+            $encoded = $encoder->encodePassword($user, $plainPassword);
+            $user->setPassword($encoded);
+            $user->setRoles(array('ROLE_USER'));
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
 
+
             return $this->redirectToRoute('home');
+
         }
+
 
         return $this->render('user/new.html.twig', [
             'user' => $user,
             'form' => $form->createView(),
         ]);
+
+
     }
 
     /**
