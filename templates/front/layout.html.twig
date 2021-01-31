@@ -214,6 +214,19 @@
 <script src="{{ asset('front/js/owl.carousel.min.js') }}" type="text/javascript"></script>
 <!--=======  ACTIVE JS =======-->
 <script src="{{ asset('front/js/main.js') }}" type="text/javascript"></script>
+<script>
+    function maPosition(position) {
+        var infopos = "Position déterminée :\n";
+        infopos += "Latitude : "+position.coords.latitude +"\n";
+        infopos += "Longitude: "+position.coords.longitude+"\n";
+        infopos += "Altitude : "+position.coords.altitude +"\n";
+        document.getElementById("infoposition").innerHTML = infopos;
+    }
+
+    if(navigator.geolocation)
+        navigator.geolocation.getCurrentPosition(maPosition);
+</script>
+
 </body>
 
 </html>

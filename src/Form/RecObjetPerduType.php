@@ -25,11 +25,19 @@ class RecObjetPerduType extends AbstractType
                 'required' => True,
             ])
             ->add('date',null)
-            ->add('localisation')
+            ->add('localisation',TextType::class,[
+        'attr' => array(
+            'id' => 'infoposition',
+            'placeholder' => 'position'
+        )
+    ])
+
             ->add('adresse',TextType::class,[
                 'label' => 'Adresse Manuelle*',
+
                 'required' => True,
                 'attr' => array(
+                    'id' => 'infoposition',
                     'placeholder' => '8,Rue el borhaine,Mourouj5,Ben Arous'
                 )
             ])
@@ -57,7 +65,11 @@ class RecObjetPerduType extends AbstractType
 
             ])
             ->add('marque')
-            ->add('dateperte')
+            ->add('dateperte',null,[
+        'attr' => array(
+            'id'=>'datetimepicker1'
+        )
+    ])
             ->add('modele')
             ->add('couleur')
             ->add('numSerie')

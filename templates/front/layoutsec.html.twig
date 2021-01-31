@@ -40,7 +40,7 @@
     <link href="{{ asset('front/css/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('node_modules/select2/dist/css/select2.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css') }}" rel="stylesheet" />
-
+    <link href="{{ asset('node_modules/datetimepicker/src/DateTimePicker.css') }}" rel="stylesheet" />
     <!--======= MODERNIZR JS ========-->
     <script src="{{ asset('front/js/vendor/modernizr-2.8.3.min.js') }}"></script>
     <!--[if lt IE 9]>
@@ -211,5 +211,23 @@
     <script src="{{ asset('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
     <script src="{{ asset('node_modules/bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js')}}"></script>
     <script src="{{ asset('js/datetimepicker.js')}}"></script>
+    <script src="{{ asset('node_modules/src/datetimepicker/DateTimePicker.js')}}"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
+    <script>
+        function maPosition(position) {
+            var infopos = "Position déterminée :\n";
+            infopos += "Latitude : "+position.coords.latitude +"\n";
+            infopos += "Longitude: "+position.coords.longitude+"\n";
+            infopos += "Altitude : "+position.coords.altitude +"\n";
+            document.getElementById("infoposition").innerHTML = infopos;
+        }
+
+        if(navigator.geolocation)
+            navigator.geolocation.getCurrentPosition(maPosition);
+    </script>
 </body>
 </html>

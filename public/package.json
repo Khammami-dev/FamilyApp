@@ -6,7 +6,9 @@
   "dependencies": {
     "bootstrap-datepicker": "^1.9.0",
     "bootstrap-datetimepicker": "0.0.7",
+    "datetimepicker": "^0.1.39",
     "jquery": "^3.5.1",
+    "pc-bootstrap4-datetimepicker": "^4.17.51",
     "select2": "^4.0.13",
     "v3": "0.0.0"
   },
